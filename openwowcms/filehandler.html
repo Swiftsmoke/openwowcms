@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class filehandler</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class filehandler</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|													<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+		<p class="notes">
+			Located in <a class="field" href="_library---classes---file---filehandler.php.html">/library/classes/file/filehandler.php</a> (line <span class="field">2</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em"><a href="../openwowcms/cachehandler.html">cachehandler</a></td>
+					<td>
+											
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+												<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#append" title="details" class="method-name">append</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$content</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$directory</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#checkpermission" title="details" class="method-name">checkpermission</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$needed</span> = <span class="var-default">0999</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$directory</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#delete" title="details" class="method-name">delete</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$directory</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#getDir" title="details" class="method-name">getDir</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$directory</span> = <span class="var-default">&quot;&quot;</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$get_dirs</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$mask</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#getFilename" title="details" class="method-name">getFilename</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$directory</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#getModificationTime" title="details" class="method-name">getModificationTime</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$directory</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#isExists" title="details" class="method-name">isExists</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$directory</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#makeDir" title="details" class="method-name">makeDir</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$directory</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#read" title="details" class="method-name">read</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$directory</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#removeDir" title="details" class="method-name">removeDir</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$directory</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#renameDir" title="details" class="method-name">renameDir</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$old_filename</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$new_filename</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$directory</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#saveHttp" title="details" class="method-name">saveHttp</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$http_name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$directory</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#write" title="details" class="method-name">write</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$content</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$directory</span> = <span class="var-default">null</span>])
+									</div>
+								
+																																																																																																												</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodappend" id="append"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static method append</span> (line <span class="line-number">48</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+	    static
+		<span class="method-result">void</span>
+		<span class="method-name">
+			append
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$content</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$directory</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$filename</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$content</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$directory</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcheckpermission" id="checkpermission"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static method checkpermission</span> (line <span class="line-number">33</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+	    static
+		<span class="method-result">void</span>
+		<span class="method-name">
+			checkpermission
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$needed</span> = <span class="var-default">0999</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$directory</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$filename</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$needed</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$directory</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddelete" id="delete"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static method delete</span> (line <span class="line-number">11</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+	    static
+		<span class="method-result">void</span>
+		<span class="method-name">
+			delete
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$directory</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$filename</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$directory</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetDir" id="getDir"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static method getDir</span> (line <span class="line-number">71</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+	    static
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getDir
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$directory</span> = <span class="var-default">&quot;&quot;</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$get_dirs</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$mask</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$directory</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$get_dirs</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$mask</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetFilename" id="getFilename"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static method getFilename</span> (line <span class="line-number">3</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+	    static
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getFilename
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$directory</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$filename</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$directory</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetModificationTime" id="getModificationTime"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static method getModificationTime</span> (line <span class="line-number">31</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+	    static
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getModificationTime
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$directory</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$filename</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$directory</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisExists" id="isExists"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static method isExists</span> (line <span class="line-number">9</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+	    static
+		<span class="method-result">void</span>
+		<span class="method-name">
+			isExists
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$directory</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$filename</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$directory</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodmakeDir" id="makeDir"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static method makeDir</span> (line <span class="line-number">109</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+	    static
+		<span class="method-result">void</span>
+		<span class="method-name">
+			makeDir
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$directory</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$filename</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$directory</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodread" id="read"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static method read</span> (line <span class="line-number">13</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+	    static
+		<span class="method-result">void</span>
+		<span class="method-name">
+			read
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$directory</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$filename</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$directory</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodremoveDir" id="removeDir"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static method removeDir</span> (line <span class="line-number">111</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+	    static
+		<span class="method-result">void</span>
+		<span class="method-name">
+			removeDir
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$directory</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$filename</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$directory</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrenameDir" id="renameDir"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static method renameDir</span> (line <span class="line-number">120</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+	    static
+		<span class="method-result">void</span>
+		<span class="method-name">
+			renameDir
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$old_filename</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$new_filename</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$directory</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$old_filename</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$new_filename</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$directory</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsaveHttp" id="saveHttp"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static method saveHttp</span> (line <span class="line-number">99</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+	    static
+		<span class="method-result">void</span>
+		<span class="method-name">
+			saveHttp
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$http_name</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$directory</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$filename</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$http_name</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$directory</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodwrite" id="write"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static method write</span> (line <span class="line-number">59</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+	    static
+		<span class="method-result">void</span>
+		<span class="method-name">
+			write
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$filename</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$content</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$directory</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$filename</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$content</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$directory</span>			</li>
+				</ul>
+		
+			
+	</div>
+
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 07 Feb 2012 13:13:54  
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class Update</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class Update</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+		<p class="notes">
+			Located in <a class="field" href="_engine---func---admin_update.php.html">/engine/func/admin_update.php</a> (line <span class="field">16</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																												
+												<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#GetModuleInfo" title="details" class="method-name">GetModuleInfo</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#GetPatchInfo" title="details" class="method-name">GetPatchInfo</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#GetStyle" title="details" class="method-name">GetStyle</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$id</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$confirm</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#GetStylesInfo" title="details" class="method-name">GetStylesInfo</a>
+										()
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getUpdatedFile" title="details" class="method-name">getUpdatedFile</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$fileurl</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#rstrtrim" title="details" class="method-name">rstrtrim</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$remove</span> = <span class="var-default">null</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#Update_file" title="details" class="method-name">Update_file</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$stylepath</span> = <span class="var-default">false</span>])
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methodGetModuleInfo" id="GetModuleInfo"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">GetModuleInfo</span> (line <span class="line-number">70</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">GetModuleInfo() - initiates in admin cp  Prints whole Update text and iframe, prints form, with module selection, then sets $_SESSION[''] and transfers it to iframe.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			GetModuleInfo
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodGetPatchInfo" id="GetPatchInfo"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">GetPatchInfo</span> (line <span class="line-number">22</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">GetPatchInfo(){ - initiates in admin cp  Prints whole Update text and iframe.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			GetPatchInfo
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodGetStyle" id="GetStyle"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">GetStyle</span> (line <span class="line-number">163</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">GetStyle($id){ - initiates in admin cp  Prints whole Update text and iframe, prints form, with module selection, then sets $_SESSION[''] and transfers it to iframe.</p>
+<p class="description"><p>$id -&gt; webwow style id (ww_templateid) to indentify which style to download.</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			GetStyle
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$id</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$confirm</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$id</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$confirm</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodGetStylesInfo" id="GetStylesInfo"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">GetStylesInfo</span> (line <span class="line-number">141</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">GetStylesInfo(){ - initiates in admin cp  Prints all available styles links - drawn from webwow.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			GetStylesInfo
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetUpdatedFile" id="getUpdatedFile"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getUpdatedFile</span> (line <span class="line-number">355</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">getUpdatedFile($fileurl) - Returns array of remote file</p>
+<p class="description"><p>on web-wow.net/$fileurl. Arrays: <ol><li>-&gt; file content {admincp} is variable that needs to parsed</li><li>-&gt; file version</li></ol></p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getUpdatedFile
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$fileurl</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$fileurl</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodrstrtrim" id="rstrtrim"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">rstrtrim</span> (line <span class="line-number">434</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			rstrtrim
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$str</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$remove</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$str</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$remove</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodUpdate_file" id="Update_file"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">Update_file</span> (line <span class="line-number">266</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Update_file($file) - $file is full file path from root.</p>
+<p class="description"><p>example: $file = engine/init.php or {admincp}/test.php  Data is gotten from webwow - core_files/.  This function initiates in IFRAME, every reload different file (loop).  Returns 1 if everything is success, 0 if file is not cached.  php and other files must be correctly formatted (without &quot;_&quot;):</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			Update_file
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$file</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$stylepath</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$file</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$stylepath</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 07 Feb 2012 13:13:53  
+	</p>
+	</div></body>
+</html>

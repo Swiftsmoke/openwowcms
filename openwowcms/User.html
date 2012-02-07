@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class User</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class User</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+                <p class="implements">
+            Implements interfaces:
+            <ul>
+                <li><a href="../openwowcms/BaseUser.html">BaseUser</a></li>            </ul>
+        </p>
+        		<!-- ========== Info from phpDoc block ========= -->
+		<p class="notes">
+			Located in <a class="field" href="_engine---core---arcemu.php.html">/engine/core/arcemu.php</a> (line <span class="field">23</span>)
+		</p>
+		
+				
+		<pre><a href="../openwowcms/SessionUser.html">SessionUser</a>
+   |
+   --User</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																												
+												<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#addIngameBan" title="details" class="method-name">addIngameBan</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$userguid</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#addNewUser" title="details" class="method-name">addNewUser</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$username</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$password</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$email</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#confirmUserPass" title="details" class="method-name">confirmUserPass</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$username</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$password</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#convertPass" title="details" class="method-name">convertPass</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$username</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$passwordraw</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#CoreSQL" title="details" class="method-name">CoreSQL</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$param1</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$param2</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$param3</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$param4</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$param5</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$param6</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$param7</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getUserGM" title="details" class="method-name">getUserGM</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$userid</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#getUserInfo" title="details" class="method-name">getUserInfo</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$username</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$userid</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#print_Char_Dropdown" title="details" class="method-name">print_Char_Dropdown</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$accountguid</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#removeIngameBans" title="details" class="method-name">removeIngameBans</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$userguid</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#return_expansion" title="details" class="method-name">return_expansion</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#sendmail" title="details" class="method-name">sendmail</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$playername</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$playerguid</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$subject</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$item</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$realmid</span> = <span class="var-default">0</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$stack</span> = <span class="var-default">1</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$money</span> = <span class="var-default">0</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$externaltext</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#updateGMlevel" title="details" class="method-name">updateGMlevel</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$userid</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$value</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$realm</span> = <span class="var-default">false</span>])
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#updatePass" title="details" class="method-name">updatePass</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$username</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$password</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#usernameBanned" title="details" class="method-name">usernameBanned</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$username</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#usernameTaken" title="details" class="method-name">usernameTaken</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$username</span>)
+									</div>
+								</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+										<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../openwowcms/SessionUser.html">SessionUser</a></span></p>
+					<blockquote>
+													<span class="var-title">
+								<span class="var-name"><a href="../openwowcms/SessionUser.html#var$logged_in">SessionUser::$logged_in</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../openwowcms/SessionUser.html#var$referrer">SessionUser::$referrer</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../openwowcms/SessionUser.html#var$time">SessionUser::$time</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../openwowcms/SessionUser.html#var$url">SessionUser::$url</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../openwowcms/SessionUser.html#var$userid">SessionUser::$userid</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../openwowcms/SessionUser.html#var$userinfo">SessionUser::$userinfo</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../openwowcms/SessionUser.html#var$userlevel">SessionUser::$userlevel</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../openwowcms/SessionUser.html#var$username">SessionUser::$username</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+
+<a name="methodaddIngameBan" id="addIngameBan"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">addIngameBan</span> (line <span class="line-number">310</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">addIngameBan - Bans user ingame.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addIngameBan
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$userguid</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$userguid</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../openwowcms/BaseUser.html#methodaddIngameBan">BaseUser::addIngameBan()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodaddNewUser" id="addNewUser"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">addNewUser</span> (line <span class="line-number">300</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">addNewUser - Inserts the given (username, password, email)  info into the database. Appropriate user level is set.</p>
+<p class="description"><p>Returns true on success, false otherwise.</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addNewUser
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$username</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$password</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$email</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$username</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$password</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$email</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../openwowcms/BaseUser.html#methodaddNewUser">BaseUser::addNewUser()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodconfirmUserPass" id="confirmUserPass"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">confirmUserPass</span> (line <span class="line-number">205</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">confirmUserPass - Checks whether or not the given</p>
+<p class="description"><p>username is in the database, if so it checks if the  given password is the same password in the database  for that user. If the user doesn't exist or if the  passwords don't match up, it returns an error code  (1 or 2). On success it returns 0.</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			confirmUserPass
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$username</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$password</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$username</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$password</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../openwowcms/BaseUser.html#methodconfirmUserPass">BaseUser::confirmUserPass()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodconvertPass" id="convertPass"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">convertPass</span> (line <span class="line-number">267</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">convertPass - Uses raw pass and hash it to correct  format.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			convertPass
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$username</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$passwordraw</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$username</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$passwordraw</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../openwowcms/BaseUser.html#methodconvertPass">BaseUser::convertPass()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodCoreSQL" id="CoreSQL"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">CoreSQL</span> (line <span class="line-number">29</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">CoreSQL - Returns Core specific SQL string</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			CoreSQL
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$id</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$param1</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$param2</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$param3</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$param4</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$param5</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$param6</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$param7</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$id</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$param1</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$param2</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$param3</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$param4</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$param5</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$param6</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$param7</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../openwowcms/BaseUser.html#methodCoreSQL">BaseUser::CoreSQL()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetUserGM" id="getUserGM"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">getUserGM</span> (line <span class="line-number">123</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">getUserGM - Returns the result of logged in user  gm premission value FROM wow accounts!!!  On error returns 0 witch means  no premission (default for normal user).</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getUserGM
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$userid</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$userid</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../openwowcms/BaseUser.html#methodgetUserGM">BaseUser::getUserGM()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetUserInfo" id="getUserInfo"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">getUserInfo</span> (line <span class="line-number">160</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">getUserInfo - Returns the result array from a mysql  query asking for all information stored regarding  the given username. If query fails, NULL is returned.</p>
+<p class="description"><p>To search by wowserver GUID then make second variable true.</p><p>List of data returned:  id as guid  username as username  joindate  last_ip  online (not fetched)  expansion</p><p>banned (0=no, other=yes)</p><p>vp  dp  question  answer  gmlevel (this one overrides gm status in server db)  avatar</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getUserInfo
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$username</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$userid</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$username</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$userid</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../openwowcms/BaseUser.html#methodgetUserInfo">BaseUser::getUserInfo()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodprint_Char_Dropdown" id="print_Char_Dropdown"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">print_Char_Dropdown</span> (line <span class="line-number">95</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">print_Char_Dropdown</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			print_Char_Dropdown
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$accountguid</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$accountguid</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../openwowcms/BaseUser.html#methodprint_Char_Dropdown">BaseUser::print_Char_Dropdown()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodremoveIngameBans" id="removeIngameBans"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">removeIngameBans</span> (line <span class="line-number">321</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">removeIngameBans - Removes all bans from ingame for user.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			removeIngameBans
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$userguid</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$userguid</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../openwowcms/BaseUser.html#methodremoveIngameBans">BaseUser::removeIngameBans()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodreturn_expansion" id="return_expansion"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">return_expansion</span> (line <span class="line-number">73</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">return expansion string for id 0-classic, 1-tbc, 2-wotlk, 3-cata</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			return_expansion
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$id</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../openwowcms/BaseUser.html#methodreturn_expansion">BaseUser::return_expansion()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodsendmail" id="sendmail"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">sendmail</span> (line <span class="line-number">338</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">sendmail - sendmail function using RA!</p>
+<p class="description"><p>This function sends pure item, no questions ask, all point(MP,DP) reducing, filtering etc  must be done before this function is called!  shopid -&gt; 0=vote, 1=donation  realmid-&gt; 0=first realm in config (engine_char_dbs), 1, 2, etc...  money  -&gt; 0= no money is sent (this is by default), if money is stated there will be no item send, you have to send seperately</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			sendmail
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$playername</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$playerguid</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$subject</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$item</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$realmid</span> = <span class="var-default">0</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$stack</span> = <span class="var-default">1</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$money</span> = <span class="var-default">0</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$externaltext</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$playername</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$playerguid</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$subject</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$item</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$realmid</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$stack</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$money</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$externaltext</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../openwowcms/BaseUser.html#methodsendmail">BaseUser::sendmail()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodupdateGMlevel" id="updateGMlevel"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">updateGMlevel</span> (line <span class="line-number">285</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">updateGMlevel - Updates user account gm level ingame.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			updateGMlevel
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$userid</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$value</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$realm</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$userid</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$value</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$realm</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../openwowcms/BaseUser.html#methodupdateGMlevel">BaseUser::updateGMlevel()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodupdatePass" id="updatePass"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">updatePass</span> (line <span class="line-number">274</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">updatePass - Updates user account password.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			updatePass
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$username</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$password</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$username</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$password</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../openwowcms/BaseUser.html#methodupdatePass">BaseUser::updatePass()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodusernameBanned" id="usernameBanned"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">usernameBanned</span> (line <span class="line-number">254</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">usernameBanned - Returns true if the username has</p>
+<p class="description"><p>been banned by INGAME. Function for website ban is  located in mysql.php</p></p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			usernameBanned
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$username</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$username</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../openwowcms/BaseUser.html#methodusernameBanned">BaseUser::usernameBanned()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodusernameTaken" id="usernameTaken"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">usernameTaken</span> (line <span class="line-number">238</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">usernameTaken - Returns true if the username has  been taken by another user, false otherwise.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			usernameTaken
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$username</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$username</span>			</li>
+				</ul>
+		
+				<hr class="separator" />
+		<div class="notes">Implementation of:</div>
+			<dl>
+			<dt><a href="../openwowcms/BaseUser.html#methodusernameTaken">BaseUser::usernameTaken()</a></dt>
+					</dl>
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../openwowcms/SessionUser.html">SessionUser</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../openwowcms/SessionUser.html#methodavatar">SessionUser::avatar()</a></span><br>
+													<span class="method-name"><a href="../openwowcms/SessionUser.html#methodcheckLogin">SessionUser::checkLogin()</a></span><br>
+													<span class="method-name"><a href="../openwowcms/SessionUser.html#methodconfirmUserID">SessionUser::confirmUserID()</a></span><br>
+													<span class="method-name"><a href="../openwowcms/SessionUser.html#methodgenerateRandID">SessionUser::generateRandID()</a></span><br>
+													<span class="method-name"><a href="../openwowcms/SessionUser.html#methodgenerateRandStr">SessionUser::generateRandStr()</a></span><br>
+													<span class="method-name"><a href="../openwowcms/SessionUser.html#methodisAdmin">SessionUser::isAdmin()</a></span><br>
+													<span class="method-name"><a href="../openwowcms/SessionUser.html#methodisGM">SessionUser::isGM()</a></span><br>
+													<span class="method-name"><a href="../openwowcms/SessionUser.html#methodlogin">SessionUser::login()</a></span><br>
+													<span class="method-name"><a href="../openwowcms/SessionUser.html#methodlogout">SessionUser::logout()</a></span><br>
+													<span class="method-name"><a href="../openwowcms/SessionUser.html#methodregister">SessionUser::register()</a></span><br>
+													<span class="method-name"><a href="../openwowcms/SessionUser.html#methodSession">SessionUser::Session()</a></span><br>
+													<span class="method-name"><a href="../openwowcms/SessionUser.html#methodstartSession">SessionUser::startSession()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Tue, 07 Feb 2012 13:13:53  
+	</p>
+	</div></body>
+</html>
