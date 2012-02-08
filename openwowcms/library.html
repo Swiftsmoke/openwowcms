@@ -61,17 +61,13 @@
 		</a><br>
 			<a href="../openwowcms/engine_installer_dynamic_checkadmin.php.html">		/installer/dynamic/checkadmin.php
 		</a><br>
+			<a href="../openwowcms/engine_lang_croatian_common.php.html">		/lang/croatian/common.php
+		</a><br>
 			<a href="../openwowcms/engine_lang_dutch_common.php.html">		/lang/dutch/common.php
 		</a><br>
 			<a href="../openwowcms/engine_lang_english_common.php.html">		/lang/english/common.php
 		</a><br>
-			<a href="../openwowcms/engine_lang_croatian_common.php.html">		/lang/croatian/common.php
-		</a><br>
 			<a href="../openwowcms/engine_lang_german_common.php.html">		/lang/german/common.php
-		</a><br>
-			<a href="../openwowcms/config_config.php.html">		/config.php
-		</a><br>
-			<a href="../openwowcms/config_config_db.php.html">		/config_db.php
 		</a><br>
 			<a href="../openwowcms/engine_modules_credits.php.html">		/modules/credits.php
 		</a><br>
@@ -109,11 +105,11 @@
 		</a><br>
 			<a href="../openwowcms/engine_lang_dutch_installer.php.html">		/lang/dutch/installer.php
 		</a><br>
-			<a href="../openwowcms/engine_lang_croatian_installer.php.html">		/lang/croatian/installer.php
+			<a href="../openwowcms/engine_lang_english_installer.php.html">		/lang/english/installer.php
 		</a><br>
 			<a href="../openwowcms/engine_lang_german_installer.php.html">		/lang/german/installer.php
 		</a><br>
-			<a href="../openwowcms/engine_lang_english_installer.php.html">		/lang/english/installer.php
+			<a href="../openwowcms/engine_lang_croatian_installer.php.html">		/lang/croatian/installer.php
 		</a><br>
 			<a href="../openwowcms/library_library.php.html">		/library.php
 		</a><br>
@@ -148,8 +144,6 @@
 			<a href="../openwowcms/tos.php.html">		/tos.php
 		</a><br>
 			<a href="../openwowcms/engine_core_trinity.php.html">		/core/trinity.php
-		</a><br>
-			<a href="../openwowcms/admincp_updated_file.php.html">		/admincp/updated_file.php
 		</a><br>
 			<a href="../openwowcms/engine_modules_userpanel.php.html">		/modules/userpanel.php
 		</a><br>
@@ -220,6 +214,7 @@ Source Location: /library/library.php<br /><br />
 <h3><a href="#class_methods">Methods</a></h3>
 <ul>
     <li><a href="../openwowcms/library.html#methodcreate_dblink">create_dblink</a></li>
+    <li><a href="../openwowcms/library.html#methodinit">init</a></li>
     <li><a href="../openwowcms/library.html#methodsupported_databases">supported_databases</a></li>
     <li><a href="../openwowcms/library.html#method_htmlspecialchars">_htmlspecialchars</a></li>
   </ul>
@@ -241,7 +236,7 @@ Source Location: /library/library.php<br /><br />
 <a name="class_details"></a>
 <h3>Class Details</h3>
 <div class="tags">
-[line 9]<br />
+[line 44]<br />
 class library<br /><br /><p>Description for class library</p><br /></div><br /><br />
 <div class="top">[ <a href="#top">Top</a> ]</div><br />
 
@@ -251,8 +246,8 @@ class library<br /><br /><p>Description for class library</p><br /></div><br /><
 <div class="tags">
 	<a name="var$supportdbs"></a>
 	<p></p>
-	<h4>static $supportdbs = <span class="value">array(&quot;mysql&quot;)</span></h4>
-	<p>[line 10]</p>
+	<h4>static $supportdbs = <span class="value">array()</span></h4>
+	<p>[line 45]</p>
   
   <br />
 	<div class="tags">
@@ -272,7 +267,7 @@ class library<br /><br /><p>Description for class library</p><br /></div><br /><
 <div class="tags">
   <hr />
 	<a name="methodcreate_dblink"></a>
-	<h3>static method create_dblink <span class="smalllinenumber">[line 46]</span></h3>
+	<h3>static method create_dblink <span class="smalllinenumber">[line 91]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -310,8 +305,24 @@ $dblink)</code>
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
+	<a name="methodinit"></a>
+	<h3>static method init <span class="smalllinenumber">[line 47]</span></h3>
+	<div class="function">
+    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
+    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
+		<code>static void init(
+)</code>
+    </td></tr></table>
+    </td></tr></table><br />
+	
+		<br /><br />
+
+	
+        <div class="top">[ <a href="#top">Top</a> ]</div>
+  </div>
+  <hr />
 	<a name="methodsupported_databases"></a>
-	<h3>static method supported_databases <span class="smalllinenumber">[line 33]</span></h3>
+	<h3>static method supported_databases <span class="smalllinenumber">[line 79]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -347,7 +358,7 @@ $dbtype = false])</code>
   </div>
   <hr />
 	<a name="method_htmlspecialchars"></a>
-	<h3>static method _htmlspecialchars <span class="smalllinenumber">[line 19]</span></h3>
+	<h3>static method _htmlspecialchars <span class="smalllinenumber">[line 66]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -378,7 +389,7 @@ $string)</code>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Wed, 08 Feb 2012 03:04:19 +0000 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.2</a>
+		    Documentation generated on Wed, 08 Feb 2012 15:45:20 +0000 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.2</a>
 	      </div>
       </td></tr></table>
     </td>

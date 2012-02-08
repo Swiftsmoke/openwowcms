@@ -61,17 +61,13 @@
 		</a><br>
 			<a href="../openwowcms/engine_installer_dynamic_checkadmin.php.html">		/installer/dynamic/checkadmin.php
 		</a><br>
+			<a href="../openwowcms/engine_lang_croatian_common.php.html">		/lang/croatian/common.php
+		</a><br>
 			<a href="../openwowcms/engine_lang_dutch_common.php.html">		/lang/dutch/common.php
 		</a><br>
 			<a href="../openwowcms/engine_lang_english_common.php.html">		/lang/english/common.php
 		</a><br>
-			<a href="../openwowcms/engine_lang_croatian_common.php.html">		/lang/croatian/common.php
-		</a><br>
 			<a href="../openwowcms/engine_lang_german_common.php.html">		/lang/german/common.php
-		</a><br>
-			<a href="../openwowcms/config_config.php.html">		/config.php
-		</a><br>
-			<a href="../openwowcms/config_config_db.php.html">		/config_db.php
 		</a><br>
 			<a href="../openwowcms/engine_modules_credits.php.html">		/modules/credits.php
 		</a><br>
@@ -109,11 +105,11 @@
 		</a><br>
 			<a href="../openwowcms/engine_lang_dutch_installer.php.html">		/lang/dutch/installer.php
 		</a><br>
-			<a href="../openwowcms/engine_lang_croatian_installer.php.html">		/lang/croatian/installer.php
+			<a href="../openwowcms/engine_lang_english_installer.php.html">		/lang/english/installer.php
 		</a><br>
 			<a href="../openwowcms/engine_lang_german_installer.php.html">		/lang/german/installer.php
 		</a><br>
-			<a href="../openwowcms/engine_lang_english_installer.php.html">		/lang/english/installer.php
+			<a href="../openwowcms/engine_lang_croatian_installer.php.html">		/lang/croatian/installer.php
 		</a><br>
 			<a href="../openwowcms/library_library.php.html">		/library.php
 		</a><br>
@@ -148,8 +144,6 @@
 			<a href="../openwowcms/tos.php.html">		/tos.php
 		</a><br>
 			<a href="../openwowcms/engine_core_trinity.php.html">		/core/trinity.php
-		</a><br>
-			<a href="../openwowcms/admincp_updated_file.php.html">		/admincp/updated_file.php
 		</a><br>
 			<a href="../openwowcms/engine_modules_userpanel.php.html">		/modules/userpanel.php
 		</a><br>
@@ -200,19 +194,19 @@ Source Location: /engine/init.php<br /><br />
 <br /><br />
 <h4>Includes:</h4>
 <div class="tags">
-include(<a href="../openwowcms/library_library.php.html">PATHROOT."library/library.php"</a>) [line 49]<br />
-require_once(<a href="../openwowcms/config_config_db.php.html">PATHROOT."config/config_db.php"</a>) [line 51]<br />
-require_once(PATHROOT.'engine/lang/'.strtolower($config['engine_lang']).'/common.php') [line 88]<br />
-require_once(<a href="../openwowcms/engine_installer_install.php.html">PATHROOT.'engine/installer/install.php'</a>) [line 84]<br />
-require_once(<a href="../openwowcms/engine_version.php.html">PATHROOT.'engine/version.php'</a>) [line 61]<br />
-require_once(<a href="../openwowcms/engine_func_session.php.html">PATHROOT."engine/func/session.php"</a>) [line 91]<br />
-require_once(<a href="../openwowcms/engine_func_form.php.html">PATHROOT."engine/func/form.php"</a>) [line 95]<br />
-require_once(<a href="../openwowcms/library_classes_file_cachehandler.php.html">PATHROOT."library/classes/file/cachehandler.php"</a>) [line 94]<br />
-require_once(PATHROOT."engine/core/".strtolower($config['engine_core']).".php") [line 96]<br />
-require_once(<a href="../openwowcms/engine_func_required.php.html">PATHROOT."engine/func/required.php"</a>) [line 97]<br />
-require_once(<a href="../openwowcms/library_classes_file_filehandler.php.html">PATHROOT."library/classes/file/filehandler.php"</a>) [line 93]<br />
-require_once(<a href="../openwowcms/engine_core_base.php.html">PATHROOT."engine/core/base.php"</a>) [line 92]<br />
-require_once(<a href="../openwowcms/config_config.php.html">PATHROOT."config/config.php"</a>) [line 50]<br />
+include(PATHROOT."config/config_db.php") [line 67]<br />
+include(<a href="../openwowcms/engine_installer_install.php.html">PATHROOT.'engine/installer/install.php'</a>) [line 84]<br />
+include(PATHROOT.'engine/lang/'.strtolower($config['engine_lang']).'/common.php') [line 88]<br />
+include(<a href="../openwowcms/engine_version.php.html">PATHROOT.'engine/version.php'</a>) [line 77]<br />
+include(PATHROOT."config/config.php") [line 66]<br />
+include(PATHROOT."engine/core/".strtolower($config['engine_core']).".php") [line 96]<br />
+include(<a href="../openwowcms/engine_func_form.php.html">PATHROOT."engine/func/form.php"</a>) [line 95]<br />
+include(<a href="../openwowcms/library_library.php.html">PATHROOT."library/library.php"</a>) [line 65]<br />
+include(<a href="../openwowcms/engine_func_required.php.html">PATHROOT."engine/func/required.php"</a>) [line 97]<br />
+include(<a href="../openwowcms/engine_core_base.php.html">PATHROOT."engine/core/base.php"</a>) [line 92]<br />
+include(<a href="../openwowcms/engine_func_session.php.html">PATHROOT."engine/func/session.php"</a>) [line 91]<br />
+include(<a href="../openwowcms/library_classes_file_filehandler.php.html">PATHROOT."library/classes/file/filehandler.php"</a>) [line 93]<br />
+include(<a href="../openwowcms/library_classes_file_cachehandler.php.html">PATHROOT."library/classes/file/cachehandler.php"</a>) [line 94]<br />
 </div>
 <br /><br />
 <br /><br />
@@ -231,7 +225,7 @@ require_once(<a href="../openwowcms/config_config.php.html">PATHROOT."config/con
 	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
   <hr />
 	<a name="defineTIMENOW"></a>
-	<h3>TIMENOW <span class="smalllinenumber">[line 68]</span></h3>
+	<h3>TIMENOW <span class="smalllinenumber">[line 30]</span></h3>
 	<div class="tags">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -244,7 +238,7 @@ require_once(<a href="../openwowcms/config_config.php.html">PATHROOT."config/con
 	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
   <hr />
 	<a name="defineTIMESTART"></a>
-	<h3>TIMESTART <span class="smalllinenumber">[line 65]</span></h3>
+	<h3>TIMESTART <span class="smalllinenumber">[line 27]</span></h3>
 	<div class="tags">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -258,7 +252,7 @@ require_once(<a href="../openwowcms/config_config.php.html">PATHROOT."config/con
 <br />
   <hr />
 	<a name="functionstripslashes_deep"></a>
-	<h3>stripslashes_deep <span class="smalllinenumber">[line 28]</span></h3>
+	<h3>stripslashes_deep <span class="smalllinenumber">[line 44]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -282,7 +276,7 @@ require_once(<a href="../openwowcms/config_config.php.html">PATHROOT."config/con
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Wed, 08 Feb 2012 03:04:19 +0000 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.2</a>
+		    Documentation generated on Wed, 08 Feb 2012 15:45:20 +0000 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.2</a>
 	      </div>
       </td></tr></table>
     </td>

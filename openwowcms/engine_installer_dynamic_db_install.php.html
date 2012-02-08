@@ -61,17 +61,13 @@
 		</a><br>
 			<a href="../openwowcms/engine_installer_dynamic_checkadmin.php.html">		/installer/dynamic/checkadmin.php
 		</a><br>
+			<a href="../openwowcms/engine_lang_croatian_common.php.html">		/lang/croatian/common.php
+		</a><br>
 			<a href="../openwowcms/engine_lang_dutch_common.php.html">		/lang/dutch/common.php
 		</a><br>
 			<a href="../openwowcms/engine_lang_english_common.php.html">		/lang/english/common.php
 		</a><br>
-			<a href="../openwowcms/engine_lang_croatian_common.php.html">		/lang/croatian/common.php
-		</a><br>
 			<a href="../openwowcms/engine_lang_german_common.php.html">		/lang/german/common.php
-		</a><br>
-			<a href="../openwowcms/config_config.php.html">		/config.php
-		</a><br>
-			<a href="../openwowcms/config_config_db.php.html">		/config_db.php
 		</a><br>
 			<a href="../openwowcms/engine_modules_credits.php.html">		/modules/credits.php
 		</a><br>
@@ -109,11 +105,11 @@
 		</a><br>
 			<a href="../openwowcms/engine_lang_dutch_installer.php.html">		/lang/dutch/installer.php
 		</a><br>
-			<a href="../openwowcms/engine_lang_croatian_installer.php.html">		/lang/croatian/installer.php
+			<a href="../openwowcms/engine_lang_english_installer.php.html">		/lang/english/installer.php
 		</a><br>
 			<a href="../openwowcms/engine_lang_german_installer.php.html">		/lang/german/installer.php
 		</a><br>
-			<a href="../openwowcms/engine_lang_english_installer.php.html">		/lang/english/installer.php
+			<a href="../openwowcms/engine_lang_croatian_installer.php.html">		/lang/croatian/installer.php
 		</a><br>
 			<a href="../openwowcms/library_library.php.html">		/library.php
 		</a><br>
@@ -148,8 +144,6 @@
 			<a href="../openwowcms/tos.php.html">		/tos.php
 		</a><br>
 			<a href="../openwowcms/engine_core_trinity.php.html">		/core/trinity.php
-		</a><br>
-			<a href="../openwowcms/admincp_updated_file.php.html">		/admincp/updated_file.php
 		</a><br>
 			<a href="../openwowcms/engine_modules_userpanel.php.html">		/modules/userpanel.php
 		</a><br>
@@ -200,43 +194,21 @@ Source Location: /engine/installer/dynamic/db_install.php<br /><br />
 <br /><br />
 <h4>Includes:</h4>
 <div class="tags">
-include(<a href="../openwowcms/library_library.php.html">PATHROOT."library/library.php"</a>) [line 54]<br />
-require(PATHROOT.'engine/lang/'.strtolower($lang).'/installer.php') [line 71]<br />
+include(<a href="../openwowcms/engine_func_required.php.html">PATHROOT."engine/func/required.php"</a>) [line 31]<br />
+include(<a href="../openwowcms/library_library.php.html">PATHROOT."library/library.php"</a>) [line 32]<br />
+include(PATHROOT.'engine/lang/'.strtolower($lang).'/installer.php') [line 46]<br />
 </div>
 <br /><br />
 <br /><br />
 <br />
   <hr />
-	<a name="functionis_valid_lang"></a>
-	<h3>is_valid_lang <span class="smalllinenumber">[line 39]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>boolean is_valid_lang(
-[string $language = &#039;&#039;])</code>
-    </td></tr></table>
-    </td></tr></table><br />
-
-		Determines wether a language is valid or not<br /><br />    <br /><br />
-	
-    		<h4>Parameters</h4>
-    <table border="0" cellspacing="0" cellpadding="0">
-		      <tr>
-        <td class="type">string&nbsp;&nbsp;</td>
-        <td><b>$language</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-				</table>
-    	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
-	</div>
-  <hr />
 	<a name="functionmysql_import_file"></a>
-	<h3>mysql_import_file <span class="smalllinenumber">[line 92]</span></h3>
+	<h3>mysql_import_file <span class="smalllinenumber">[line 67]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
 		<code>boolean mysql_import_file(
-string &$con,  $filename,  &$errmsg)</code>
+string &$con,  $filename)</code>
     </td></tr></table>
     </td></tr></table><br />
 
@@ -263,41 +235,13 @@ string &$con,  $filename,  &$errmsg)</code>
         <td><b>$filename</b>&nbsp;&nbsp;</td>
         <td></td>
       </tr>
-		      <tr>
-        <td class="type">&nbsp;&nbsp;</td>
-        <td><b>&$errmsg</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
-				</table>
-    	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
-	</div>
-  <hr />
-	<a name="functionsanitize"></a>
-	<h3>sanitize <span class="smalllinenumber">[line 28]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>string sanitize(
-[string $string = &#039;&#039;])</code>
-    </td></tr></table>
-    </td></tr></table><br />
-
-		Removes all characters that are not alphabetical nor numerical<br /><br />    <br /><br />
-	
-    		<h4>Parameters</h4>
-    <table border="0" cellspacing="0" cellpadding="0">
-		      <tr>
-        <td class="type">string&nbsp;&nbsp;</td>
-        <td><b>$string</b>&nbsp;&nbsp;</td>
-        <td></td>
-      </tr>
 				</table>
     	<div class="top">[ <a href="#top">Top</a> ]</div><br /><br />
 	</div>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Wed, 08 Feb 2012 03:04:19 +0000 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.2</a>
+		    Documentation generated on Wed, 08 Feb 2012 15:45:20 +0000 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.2</a>
 	      </div>
       </td></tr></table>
     </td>

@@ -61,17 +61,13 @@
 		</a><br>
 			<a href="../openwowcms/engine_installer_dynamic_checkadmin.php.html">		/installer/dynamic/checkadmin.php
 		</a><br>
+			<a href="../openwowcms/engine_lang_croatian_common.php.html">		/lang/croatian/common.php
+		</a><br>
 			<a href="../openwowcms/engine_lang_dutch_common.php.html">		/lang/dutch/common.php
 		</a><br>
 			<a href="../openwowcms/engine_lang_english_common.php.html">		/lang/english/common.php
 		</a><br>
-			<a href="../openwowcms/engine_lang_croatian_common.php.html">		/lang/croatian/common.php
-		</a><br>
 			<a href="../openwowcms/engine_lang_german_common.php.html">		/lang/german/common.php
-		</a><br>
-			<a href="../openwowcms/config_config.php.html">		/config.php
-		</a><br>
-			<a href="../openwowcms/config_config_db.php.html">		/config_db.php
 		</a><br>
 			<a href="../openwowcms/engine_modules_credits.php.html">		/modules/credits.php
 		</a><br>
@@ -109,11 +105,11 @@
 		</a><br>
 			<a href="../openwowcms/engine_lang_dutch_installer.php.html">		/lang/dutch/installer.php
 		</a><br>
-			<a href="../openwowcms/engine_lang_croatian_installer.php.html">		/lang/croatian/installer.php
+			<a href="../openwowcms/engine_lang_english_installer.php.html">		/lang/english/installer.php
 		</a><br>
 			<a href="../openwowcms/engine_lang_german_installer.php.html">		/lang/german/installer.php
 		</a><br>
-			<a href="../openwowcms/engine_lang_english_installer.php.html">		/lang/english/installer.php
+			<a href="../openwowcms/engine_lang_croatian_installer.php.html">		/lang/croatian/installer.php
 		</a><br>
 			<a href="../openwowcms/library_library.php.html">		/library.php
 		</a><br>
@@ -148,8 +144,6 @@
 			<a href="../openwowcms/tos.php.html">		/tos.php
 		</a><br>
 			<a href="../openwowcms/engine_core_trinity.php.html">		/core/trinity.php
-		</a><br>
-			<a href="../openwowcms/admincp_updated_file.php.html">		/admincp/updated_file.php
 		</a><br>
 			<a href="../openwowcms/engine_modules_userpanel.php.html">		/modules/userpanel.php
 		</a><br>
@@ -221,7 +215,6 @@ Source Location: /engine/installer/install.php<br /><br />
     <li><a href="../openwowcms/Install.html#methodcheckTable">checkTable</a></li>
     <li><a href="../openwowcms/Install.html#methodGo">Go</a></li>
     <li><a href="../openwowcms/Install.html#methodInput">Input</a></li>
-    <li><a href="../openwowcms/Install.html#methodln">ln</a></li>
     <li><a href="../openwowcms/Install.html#methodTree">Tree</a></li>
     <li><a href="../openwowcms/Install.html#methodwritefile">writefile</a></li>
   </ul>
@@ -243,7 +236,7 @@ Source Location: /engine/installer/install.php<br /><br />
 <a name="class_details"></a>
 <h3>Class Details</h3>
 <div class="tags">
-[line 87]<br />
+[line 58]<br />
 Install<br /><br /><br /><br />
 <h4>Tags:</h4>
 <div class="tags">
@@ -264,7 +257,7 @@ Install<br /><br /><br /><br />
 
   <hr />
 	<a name="methodcheckForEmptyDB"></a>
-	<h3>method checkForEmptyDB <span class="smalllinenumber">[line 548]</span></h3>
+	<h3>method checkForEmptyDB <span class="smalllinenumber">[line 490]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -306,7 +299,7 @@ $database)</code>
   </div>
   <hr />
 	<a name="methodcheckTable"></a>
-	<h3>method checkTable <span class="smalllinenumber">[line 531]</span></h3>
+	<h3>method checkTable <span class="smalllinenumber">[line 474]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -348,7 +341,7 @@ $table)</code>
   </div>
   <hr />
 	<a name="methodGo"></a>
-	<h3>method Go <span class="smalllinenumber">[line 121]</span></h3>
+	<h3>method Go <span class="smalllinenumber">[line 67]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -373,7 +366,7 @@ $table)</code>
   </div>
   <hr />
 	<a name="methodInput"></a>
-	<h3>method Input <span class="smalllinenumber">[line 575]</span></h3>
+	<h3>method Input <span class="smalllinenumber">[line 516]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -438,36 +431,8 @@ $more = false])</code>
         <div class="top">[ <a href="#top">Top</a> ]</div>
   </div>
   <hr />
-	<a name="methodln"></a>
-	<h3>method ln <span class="smalllinenumber">[line 96]</span></h3>
-	<div class="function">
-    <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
-    <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
-		<code>string ln(
-)</code>
-    </td></tr></table>
-    </td></tr></table><br />
-	
-		Line - Returns the Line Ending Characters based on Operating System<br /><br /><br /><br />
-<h4>Tags:</h4>
-<div class="tags">
-<table border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td><b>return:</b>&nbsp;&nbsp;</td><td>Line Ending Characters</td>
-  </tr>
-  <tr>
-    <td><b>access:</b>&nbsp;&nbsp;</td><td>public</td>
-  </tr>
-</table>
-</div>
-<br /><br />
-
-	
-        <div class="top">[ <a href="#top">Top</a> ]</div>
-  </div>
-  <hr />
 	<a name="methodTree"></a>
-	<h3>method Tree <span class="smalllinenumber">[line 602]</span></h3>
+	<h3>method Tree <span class="smalllinenumber">[line 542]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -503,7 +468,7 @@ string
   </div>
   <hr />
 	<a name="methodwritefile"></a>
-	<h3>method writefile <span class="smalllinenumber">[line 498]</span></h3>
+	<h3>method writefile <span class="smalllinenumber">[line 443]</span></h3>
 	<div class="function">
     <table width="90%" border="0" cellspacing="0" cellpadding="1"><tr><td class="code_border">
     <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr><td class="code">
@@ -548,7 +513,7 @@ $file)</code>
 
         <div class="credit">
 		    <hr />
-		    Documentation generated on Wed, 08 Feb 2012 03:04:19 +0000 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.2</a>
+		    Documentation generated on Wed, 08 Feb 2012 15:45:20 +0000 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.2</a>
 	      </div>
       </td></tr></table>
     </td>
