@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>phpDocumentor Parser Errors and Warnings</title>
+	<link rel="stylesheet" type="text/css" href="media/style.css">
+	<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+</head>
+<body>
+
+<table border="0" cellspacing="0" cellpadding="0" height="48" width="100%">
+  <tr>
+	<td class="header-top-left"><img src="media/logo.png" border="0" alt="phpDocumentor " /></td>
+    <td class="header-top-right">openwowcms<br /><div class="header-top-right-subpackage"></div></td>
+  </tr>
+  <tr><td colspan="2" class="header-line"><img src="media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+  <tr>
+    <td colspan="2" class="header-menu">
+      
+                        
+                      		[ <a href="classtrees_openwowcms.html" class="menu">class tree: openwowcms</a> ]
+		[ <a href="elementindex_openwowcms.html" class="menu">index: openwowcms</a> ]
+            [ <a href="elementindex.html" class="menu">all elements</a> ]
+    </td>
+  </tr>
+  <tr><td colspan="2" class="header-line"><img src="media/empty.png" width="1" height="1" border="0" alt=""  /></td></tr>
+</table>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="195" class="menu">
+		<div class="package-title">openwowcms</div>
+  <div class="package">
+	<div id="ric">
+					<p><a href="ric_README.html">README</a></p>
+			</div>
+	</div>
+      <b>Packages:</b><br />
+  <div class="package">
+              <a href="li_openwowcms.html">openwowcms</a><br />
+      	</div>
+      <br />
+                </td>
+    <td>
+      <table cellpadding="10" cellspacing="0" width="100%" border="0"><tr><td valign="top">
+
+<a href="#Post-parsing">Post-parsing</a><br>
+<a href="#adminfunc.php">adminfunc.php</a><br>
+<a href="#adminfunc2.php">adminfunc2.php</a><br>
+<a href="#adminfunc3.php">adminfunc3.php</a><br>
+<a href="#admin_update.php">admin_update.php</a><br>
+<a href="#ajaxkey.php">ajaxkey.php</a><br>
+<a href="#arcemu.php">arcemu.php</a><br>
+<a href="#base.php">base.php</a><br>
+<a href="#body3-1-1-1.php">body3-1-1-1.php</a><br>
+<a href="#cachehandler.php">cachehandler.php</a><br>
+<a href="#cache_menulinks.php">cache_menulinks.php</a><br>
+<a href="#cache_page.php">cache_page.php</a><br>
+<a href="#cache_vote_loggedin.php">cache_vote_loggedin.php</a><br>
+<a href="#cache_vote_loggedout.php">cache_vote_loggedout.php</a><br>
+<a href="#checkadmin.php">checkadmin.php</a><br>
+<a href="#common.php">common.php</a><br>
+<a href="#config.php">config.php</a><br>
+<a href="#config_db.php">config_db.php</a><br>
+<a href="#credits.php">credits.php</a><br>
+<a href="#database.php">database.php</a><br>
+<a href="#database_mysql.php">database_mysql.php</a><br>
+<a href="#db_con.php">db_con.php</a><br>
+<a href="#db_install.php">db_install.php</a><br>
+<a href="#deactivated-1-1-1.php">deactivated-1-1-1.php</a><br>
+<a href="#defines.php">defines.php</a><br>
+<a href="#filehandler.php">filehandler.php</a><br>
+<a href="#form.php">form.php</a><br>
+<a href="#iframe_ascii.php">iframe_ascii.php</a><br>
+<a href="#iframe_fetchplugin.php">iframe_fetchplugin.php</a><br>
+<a href="#iframe_update.php">iframe_update.php</a><br>
+<a href="#iframe_update2.php">iframe_update2.php</a><br>
+<a href="#index.php">index.php</a><br>
+<a href="#init.php">init.php</a><br>
+<a href="#install.php">install.php</a><br>
+<a href="#installer.php">installer.php</a><br>
+<a href="#library.php">library.php</a><br>
+<a href="#loginout.php">loginout.php</a><br>
+<a href="#mangos.php">mangos.php</a><br>
+<a href="#modules.php">modules.php</a><br>
+<a href="#news.php">news.php</a><br>
+<a href="#news_comments.php">news_comments.php</a><br>
+<a href="#news_save.php">news_save.php</a><br>
+<a href="#nicetime.php">nicetime.php</a><br>
+<a href="#parser.php">parser.php</a><br>
+<a href="#profile.php">profile.php</a><br>
+<a href="#register.php">register.php</a><br>
+<a href="#required.php">required.php</a><br>
+<a href="#session.php">session.php</a><br>
+<a href="#shoutbox.php">shoutbox.php</a><br>
+<a href="#status.php">status.php</a><br>
+<a href="#tos.php">tos.php</a><br>
+<a href="#trinity.php">trinity.php</a><br>
+<a href="#updated_file.php">updated_file.php</a><br>
+<a href="#userpanel.php">userpanel.php</a><br>
+<a href="#version.php">version.php</a><br>
+<a href="#vote.php">vote.php</a><br>
+<a href="#vote_proccess.php">vote_proccess.php</a><br>
+<a name="Post-parsing"></a>
+<h1>Post-parsing</h1>
+<h2>Warnings:</h2><br>
+<b>Warning</b> - 
+duplicate define element "PATHROOT" in file C:\Users\User\Documents\My Web Sites\openwowcms\engine\installer\dynamic\checkadmin.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "PATHROOT" in file C:\Users\User\Documents\My Web Sites\openwowcms\engine\init.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "PATHROOT" in file C:\Users\User\Documents\My Web Sites\openwowcms\engine\installer\dynamic\db_install.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "PATHROOT" in file C:\Users\User\Documents\My Web Sites\openwowcms\engine\modules\profile.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "TBL_ACCOUNT" in file C:\Users\User\Documents\My Web Sites\openwowcms\engine\core\mangos.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "PATHROOT" in file C:\Users\User\Documents\My Web Sites\openwowcms\engine\modules\shoutbox.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "PATHROOT" in file C:\Users\User\Documents\My Web Sites\openwowcms\engine\dynamic\vote_proccess.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "PATHROOT" in file C:\Users\User\Documents\My Web Sites\openwowcms\engine\dynamic\news_save.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate class element "User" in file C:\Users\User\Documents\My Web Sites\openwowcms\engine\core\trinity.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate class element "User" in file C:\Users\User\Documents\My Web Sites\openwowcms\engine\core\mangos.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "sanitize" in file C:\Users\User\Documents\My Web Sites\openwowcms\engine\installer\install.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "Process" in file C:\Users\User\Documents\My Web Sites\openwowcms\engine\modules\register.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "PATHROOT" in file C:\Users\User\Documents\My Web Sites\openwowcms\engine\dynamic\news_comments.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "Process" in file C:\Users\User\Documents\My Web Sites\openwowcms\engine\modules\userpanel.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "TBL_ACCOUNT" in file C:\Users\User\Documents\My Web Sites\openwowcms\engine\core\trinity.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate function element "is_valid_lang" in file C:\Users\User\Documents\My Web Sites\openwowcms\engine\installer\install.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "TBL_BANNED_USERS_SERVER" in file C:\Users\User\Documents\My Web Sites\openwowcms\engine\core\trinity.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "TBL_CHARACTERS" in file C:\Users\User\Documents\My Web Sites\openwowcms\engine\core\mangos.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning</b> - 
+duplicate define element "TBL_CHARACTERS" in file C:\Users\User\Documents\My Web Sites\openwowcms\engine\core\trinity.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<a name="admincp.php"></a>
+<h1>admincp.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 196</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\lang\german\admincp.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<b>Warning on line 196</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\lang\english\admincp.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<b>Warning on line 196</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\lang\dutch\admincp.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<b>Warning on line 197</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\lang\croatian\admincp.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="adminfunc.php"></a>
+<h1>adminfunc.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 18</b> - no @package tag was used in a DocBlock for class adminfunc<br>
+<b>Warning on line 806</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\func\adminfunc.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="adminfunc2.php"></a>
+<h1>adminfunc2.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 44</b> - no @package tag was used in a DocBlock for file C:\Users\User\Documents\My Web Sites\openwowcms\engine\func\adminfunc2.php<br>
+<a name="adminfunc3.php"></a>
+<h1>adminfunc3.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 44</b> - no @package tag was used in a DocBlock for file C:\Users\User\Documents\My Web Sites\openwowcms\engine\func\adminfunc3.php<br>
+<a name="admin_update.php"></a>
+<h1>admin_update.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 15</b> - no @package tag was used in a DocBlock for class Update<br>
+<b>Warning on line 454</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\func\admin_update.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="ajaxkey.php"></a>
+<h1>ajaxkey.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 1</b> - no @package tag was used in a DocBlock for class ajaxkey<br>
+<b>Warning on line 25</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\library\classes\security\ajaxkey.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="arcemu.php"></a>
+<h1>arcemu.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 23</b> - no @package tag was used in a DocBlock for class User<br>
+<b>Warning on line 383</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\core\arcemu.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="base.php"></a>
+<h1>base.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 1</b> - no @package tag was used in a DocBlock for interface BaseUser<br>
+<b>Warning on line 18</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\core\base.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="body3-1-1-1.php"></a>
+<h1>body3-1-1-1.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 11</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\plugins\body3-1-1-1.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="cachehandler.php"></a>
+<h1>cachehandler.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 1</b> - no @package tag was used in a DocBlock for class cachehandler<br>
+<b>Warning on line 21</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\library\classes\file\cachehandler.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="cache_menulinks.php"></a>
+<h1>cache_menulinks.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 34</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\_cache\cache_menulinks.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="cache_page.php"></a>
+<h1>cache_page.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 172</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\_cache\cache_page.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="cache_vote_loggedin.php"></a>
+<h1>cache_vote_loggedin.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 2</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\_cache\cache_vote_loggedin.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="cache_vote_loggedout.php"></a>
+<h1>cache_vote_loggedout.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 2</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\_cache\cache_vote_loggedout.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="checkadmin.php"></a>
+<h1>checkadmin.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 100</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\installer\dynamic\checkadmin.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="common.php"></a>
+<h1>common.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 131</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\lang\english\common.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<b>Warning on line 131</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\lang\croatian\common.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<b>Warning on line 132</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\lang\dutch\common.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<b>Warning on line 141</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\lang\german\common.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="config.php"></a>
+<h1>config.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 24</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\config\config.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="config_db.php"></a>
+<h1>config_db.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 4</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\config\config_db.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="credits.php"></a>
+<h1>credits.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 18</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\modules\credits.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="database.php"></a>
+<h1>database.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 9</b> - Unknown tag "@author:" used<br>
+<b>Warning on line 9</b> - no @package tag was used in a DocBlock for class database<br>
+<b>Warning on line 291</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\library\classes\database\database.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="database_mysql.php"></a>
+<h1>database_mysql.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 14</b> - no @package tag was used in a DocBlock for class database_mysql<br>
+<b>Warning on line 104</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\library\classes\database\database_mysql.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="db_con.php"></a>
+<h1>db_con.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 29</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\installer\dynamic\db_con.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="db_install.php"></a>
+<h1>db_install.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 356</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\installer\dynamic\db_install.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="deactivated-1-1-1.php"></a>
+<h1>deactivated-1-1-1.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 0</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\plugins\deactivated-1-1-1.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="defines.php"></a>
+<h1>defines.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\admincp\defines.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="filehandler.php"></a>
+<h1>filehandler.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 1</b> - no @package tag was used in a DocBlock for class filehandler<br>
+<b>Warning on line 125</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\library\classes\file\filehandler.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="form.php"></a>
+<h1>form.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 11</b> - no @package tag was used in a DocBlock for class Form<br>
+<b>Warning on line 84</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\func\form.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="iframe_ascii.php"></a>
+<h1>iframe_ascii.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 20</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\admincp\iframe_ascii.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="iframe_fetchplugin.php"></a>
+<h1>iframe_fetchplugin.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 89</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\admincp\iframe_fetchplugin.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="iframe_update.php"></a>
+<h1>iframe_update.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 123</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\admincp\iframe_update.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="iframe_update2.php"></a>
+<h1>iframe_update2.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 51</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\admincp\iframe_update2.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="index.php"></a>
+<h1>index.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 21</b> - 
+duplicate define element "LICENSE" in file C:\Users\User\Documents\My Web Sites\openwowcms\admincp\index.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning on line 34</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\index.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<b>Warning on line 190</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\admincp\index.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="init.php"></a>
+<h1>init.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 100</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\init.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="install.php"></a>
+<h1>install.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 86</b> - no @package tag was used in a DocBlock for class Install<br>
+<b>Warning on line 725</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\installer\install.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="installer.php"></a>
+<h1>installer.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 76</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\lang\german\installer.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<b>Warning on line 76</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\lang\croatian\installer.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<b>Warning on line 76</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\lang\dutch\installer.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<b>Warning on line 77</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\lang\english\installer.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="library.php"></a>
+<h1>library.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 8</b> - no @package tag was used in a DocBlock for class library<br>
+<b>Warning on line 8</b> - Unknown tag "@author:" used<br>
+<b>Warning on line 56</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\library\library.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="loginout.php"></a>
+<h1>loginout.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 15</b> - no @package tag was used in a DocBlock for file C:\Users\User\Documents\My Web Sites\openwowcms\engine\modules\loginout.php<br>
+<a name="mangos.php"></a>
+<h1>mangos.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 24</b> - no @package tag was used in a DocBlock for class User<br>
+<b>Warning on line 448</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\core\mangos.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="modules.php"></a>
+<h1>modules.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 11</b> - no @package tag was used in a DocBlock for class module_base<br>
+<b>Warning on line 11</b> - Unknown tag "@author:" used<br>
+<b>Warning on line 105</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\library\classes\modules\modules.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="news.php"></a>
+<h1>news.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 61</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\news.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="news_comments.php"></a>
+<h1>news_comments.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 9</b> - no @package tag was used in a DocBlock for file C:\Users\User\Documents\My Web Sites\openwowcms\engine\dynamic\news_comments.php<br>
+<a name="news_save.php"></a>
+<h1>news_save.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 45</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\dynamic\news_save.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="nicetime.php"></a>
+<h1>nicetime.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 51</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\func\nicetime.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="parser.php"></a>
+<h1>parser.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 429</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\func\parser.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="profile.php"></a>
+<h1>profile.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 11</b> - no @package tag was used in a DocBlock for class profile<br>
+<b>Warning on line 223</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\modules\profile.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="register.php"></a>
+<h1>register.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 17</b> - no @package tag was used in a DocBlock for file C:\Users\User\Documents\My Web Sites\openwowcms\engine\modules\register.php<br>
+<a name="required.php"></a>
+<h1>required.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 16</b> - no @package tag was used in a DocBlock for class Html<br>
+<b>Warning on line 586</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\func\required.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="session.php"></a>
+<h1>session.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 21</b> - 
+duplicate define element "TRACK_VISITORS" in file C:\Users\User\Documents\My Web Sites\openwowcms\engine\func\session.php will be ignored.
+Use an @ignore tag on the original if you want this case to be documented.<br>
+<b>Warning on line 52</b> - no @package tag was used in a DocBlock for class SessionUser<br>
+<b>Warning on line 468</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\func\session.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="shoutbox.php"></a>
+<h1>shoutbox.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 14</b> - no @package tag was used in a DocBlock for class shoutbox<br>
+<b>Warning on line 140</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\modules\shoutbox.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="status.php"></a>
+<h1>status.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 38</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\dynamic\status.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="tos.php"></a>
+<h1>tos.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 147</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\tos.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="trinity.php"></a>
+<h1>trinity.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 19</b> - no @package tag was used in a DocBlock for class User<br>
+<b>Warning on line 443</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\core\trinity.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="updated_file.php"></a>
+<h1>updated_file.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 5</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\admincp\updated_file.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="userpanel.php"></a>
+<h1>userpanel.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 15</b> - no @package tag was used in a DocBlock for file C:\Users\User\Documents\My Web Sites\openwowcms\engine\modules\userpanel.php<br>
+<a name="version.php"></a>
+<h1>version.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 3</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\version.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="vote.php"></a>
+<h1>vote.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 13</b> - File "C:\Users\User\Documents\My Web Sites\openwowcms\engine\vote.php" has no page-level DocBlock, use @package in the first DocBlock to create one<br>
+<a name="vote_proccess.php"></a>
+<h1>vote_proccess.php</h1>
+<h2>Warnings:</h2><br>
+<b>Warning on line 9</b> - no @package tag was used in a DocBlock for file C:\Users\User\Documents\My Web Sites\openwowcms\engine\dynamic\vote_proccess.php<br>
+        <div class="credit">
+		    <hr class="separator" />
+		    Documentation generated on Wed, 08 Feb 2012 01:38:46 +0000 by <a href="http://www.phpdoc.org">phpDocumentor 1.4.2</a>
+	      </div>
+      </td></tr></table>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
