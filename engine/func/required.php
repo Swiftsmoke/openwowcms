@@ -233,9 +233,9 @@ class Html {
 			// Cache vote links now
 			// engine/_cache/cache_vote_loggedin.php and engine/_cache/cache_vote_loggedout.php
 			if (!Html::cache_vote())
-				echo "<font color=red>cache_vote_loggedoin.php<br>cache_vote_loggedout.php</font><br>";
+				echo "<font color=red>cache_vote_loggedin.php<br>cache_vote_loggedout.php</font><br>";
 			else
-				echo "<font color=green>cache_vote_loggedoin.php<br>cache_vote_loggedout.php</font><br>";
+				echo "<font color=green>cache_vote_loggedin.php<br>cache_vote_loggedout.php</font><br>";
 
 			// End Caching
 			// Here we will once more reload page using meta reload, sometimes it needs
@@ -289,10 +289,13 @@ class Html {
 	}
 
 	static function cache($string, $file) {
+		$fh = @fopen( $file, "w" );
+		@fclose( $fh );
 		if ($string=='') $string='<?php'. Html::ln() . '/* This file is auto-generated because cache script was initiated */'. Html::ln().'/* and content was empty. ( '.$file.' ) */' . Html::ln(). '/* This file is part of Web-WoW CMS v2 all rights reserved. */' . Html::ln().'?>';
-		filehandler::checkpermission($file, 0666);
+		// Fix fhis later....
+		//filehandler::checkpermission($file, 0666);
 		filehandler::write($file, $string);
-		return filehandler::checkpermission($file, 0664);
+		return; // filehandler::checkpermission($file, 0664);
 	}
 
 	static function cache_menulinks() { #returns true on success else false
@@ -397,7 +400,9 @@ class Html {
 		/**
 		* Initiate cache now:
 		*/
-		if (Html::cache($out1,PATHROOT.'engine/_cache/cache_vote_loggedin.php') && Html::cache($out2,PATHROOT.'engine/_cache/cache_vote_loggedout.php'))
+		if (Html::cache($out1,PATHROOT.'engine/_cache/cache_vote_loggedin.php'))  $fin=true;  else $fin=false;
+		if (Html::cache($out2,PATHROOT.'engine/_cache/cache_vote_loggedout.php')) $fout=true; else $fout=false;
+		if (($fin) && ($fout))
 			return true;
 		else
 			return false;
