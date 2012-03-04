@@ -15,7 +15,11 @@
 * 	 Updated: $Date 2012/02/08 14:00 $
 *
 ************************************************************************/
-define('VERSION','1.2.0');
-define('LASTUPDATE','02/10/2012');
-define('SHA_VERSION', '14309afacab0b49be82d77df0695c6af5362b505');
+define('VERSION','3.0.0');
+define('LASTUPDATE','03/04/2012');
+<<<<<<< HEAD
+define('SHA_VERSION', '0d0250007bbc37d1fd9829eca353d8ec0b45c96e');
+=======
+define('SHA_VERSION', '74e63fbaa954522996b9a524abb009c0e4e70097');
+>>>>>>> 8574a75... Fix for Issue #9.
 ?>
