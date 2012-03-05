@@ -1,6 +1,6 @@
 <?php
 /************************************************************************
-*														  engine/version.php
+*	                            engine/version.php
 *                            -------------------
 * 	 Copyright (C) 2011
 *
@@ -15,7 +15,7 @@
 * 	 Updated: $Date 2012/02/08 14:00 $
 *
 ************************************************************************/
-define('VERSION','1.2.0');
-define('LASTUPDATE','02/10/2012');
-define('SHA_VERSION', '14309afacab0b49be82d77df0695c6af5362b505');
+define('VERSION','3.0.0');
+define('LASTUPDATE','03/04/2012');
+define('SHA_VERSION', '0d0250007bbc37d1fd9829eca353d8ec0b45c96e');
 ?>
