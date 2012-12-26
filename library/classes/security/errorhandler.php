@@ -54,22 +54,26 @@ class errorhandler extends filehandler {
 		}
 
 		static function error($level, $message, $file, $line, $context) {
-				if (self::$enabled == false) return;
-				switch ($level)
-				{
-						default:
-								self::minor($message, $file, $line, $context);
-						break;
-						case E_USER_ERROR:
-						case E_USER_NOTICE:
-						case E_WARNING:
-						case E_COMPILE_ERROR:
-						case E_CORE_ERROR:
-						case E_ERROR:
-						case E_ALL:
-								self::major($message, $context);
-						break;
-				}
+            if (self::$enabled == false)
+            {
+                echo $message;
+                return;
+            }
+            switch ($level)
+            {
+                default:
+                    self::minor($message, $file, $line, $context);
+                break;
+                case E_USER_ERROR:
+                case E_USER_NOTICE:
+                case E_WARNING:
+                case E_COMPILE_ERROR:
+                case E_CORE_ERROR:
+                case E_ERROR:
+                case E_ALL:
+                    self::major($message, $context);
+                break;
+            }
 		}
 
 		static function exception($exception) {
