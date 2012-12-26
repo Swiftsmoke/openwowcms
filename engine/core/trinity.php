@@ -122,7 +122,7 @@ class User extends SessionUser implements BaseUser {
 						echo '<option value="'.$key.'-'.$a2[1].$sel.'">'.$split_realmname[$key].' &raquo; '.$a2[0].'</option>';
 					}
 				} //else $_SESSION['notice'].= $q." - ".$db_realmconnector->getLastError()."<br>\n";
-			} 
+			}
 		}
 		echo '</select>';
 	}
@@ -396,7 +396,9 @@ class User extends SessionUser implements BaseUser {
 			return '<span class="colorbad">No port defined on <strong>'.$realm_host.'</strong> host in configuration (config.php &raquo; trinity_ra_port).</span>';
 		if ($realm_host=='')
 			return '<span class="colorbad">No host defined in configuration (config.php &raquo; engine_char_dbs or default SQL host).</span>';
+        errorhandler::enable(false);
 		$s = @fsockopen($realm_host, $realm_ra_port[$realmid], $ERROR_NO, $ERROR_STR,(float)0.5);
+        errorhandler::enable(true);
 		if($s){@fclose($s);} else return '<span class="colorbad">Port <strong>"'.$realm_ra_port[$realmid].'"</strong> on <strong>'.$realm_host.'</strong> is closed.</span><br>Tip: Sometimes DNS name providers block certain ports, you can try using pure IP address as HOST.';
 		/**
 		* START SCRIPT:

@@ -17,5 +17,5 @@
 ************************************************************************/
 define('VERSION','1.2.0');
 define('LASTUPDATE','02/10/2012');
-define('SHA_VERSION', '14309afacab0b49be82d77df0695c6af5362b505');
+define('SHA_VERSION', 'f60fa168a2a20e57ee73071ebffa92bfc78a9f61');
 ?>

@@ -606,7 +606,7 @@ $title = $installer_lang["WWC v2 Installer"] . (isset($_GET['step']) && strlen($
 						<td width="200px" valign="top">
 							<h1><img src="engine/installer/res/logo.png" alt="logo.png"><span><strong><?php echo $installer_lang["WebWoW CMS v2 Install Script"]; ?></strong></span></h1>
 						</td>
-						<td><div id = "footer">OpenWoW CMS v2 &copy; 2012<br/>Powered by <a href = "http://www.openwow.net" title="OpenWoW CMS">OpenWoW</a></div></td>
+						<td><div id = "footer">OpenWoW CMS v1 &copy; 2012<br/>Powered by <a href = "http://www.openwow.net" title="OpenWoW CMS">OpenWoW</a></div></td>
 					</tr>
 				</table>
 			</div>

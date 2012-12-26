@@ -2,7 +2,7 @@
   
   $installer_lang = array(
     
-    "WebWoW CMS v2 Install Script" => "WebWoW CMS v2 Install Script",
+    "WebWoW CMS v2 Install Script" => "OpenWoW CMS v1 Install Script",
     "WWC v2 Installer" => "WWC v2 Installer",
     "Language selection" => "Language selection",
     "Next Step" => "Next Step",

@@ -259,12 +259,15 @@ else
 		<h4>'.$printoutlist3[0].'</h4>
 		<blockquote>';
 		$counter=0;
-		foreach ($existing_plugins[$printoutlist3[1]] as $pluginname)
-		{
-			$pluginname2=explode("-",$pluginname);
-			echo '<span class="phpfile"><a href="./?f=plugins&x='.$printoutlist3[1].'&y='.$pluginname2[0].'&z='.$pluginname2[1].'&boxed='.$pluginname2[2].'">'.$printoutlist3[1].'-'.$pluginname.'.php</a></span><br>';
-			$counter++;
-		}
+        if (isset($existing_plugins[$printoutlist3[1]]))
+        {
+		    foreach ($existing_plugins[$printoutlist3[1]] as $pluginname)
+		    {
+			    $pluginname2=explode("-",$pluginname);
+			    echo '<span class="phpfile"><a href="./?f=plugins&x='.$printoutlist3[1].'&y='.$pluginname2[0].'&z='.$pluginname2[1].'&boxed='.$pluginname2[2].'">'.$printoutlist3[1].'-'.$pluginname.'.php</a></span><br>';
+			    $counter++;
+		    }
+        }
 		if ($counter==0)
 			echo '<i><a href="./?f=plugins&x='.$printoutlist3[1].'&y=&z=&boxed=">'.$lang_admincp['No plugins attached to'].' '.$printoutlist3[1].'.</a></i>';
 		echo '</blockquote></blockquote>';
