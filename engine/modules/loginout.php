@@ -34,6 +34,9 @@ if (isset($proccess) && $proccess == TRUE) {
 	$config['title'] = $lang['Login']. ' - ' .$config['title'];
 	function Process() {
 		global $user;
+
+        if (!captcha::verifycaptcha($_POST['captcha'], 'loginout'))
+            Form::setError('captcha', "* Invalid Captcha");
 		/* Login attempt */
 		$retval = $user->login($_POST['user'], $_POST['pass'], isset($_POST['remember']));
 		/* Login failed */
@@ -64,8 +67,6 @@ if (isset($proccess) && $proccess == TRUE) {
 	Form::_Form();
 	return;
 }
-//sql to delete user from wwc2_active_users that have blank name
-$db->query("DELETE FROM ".TBL_ACTIVE_USERS." WHERE username=''");
 ?>
 <!-- This element is important, must be at beginning of module output, dont change it, except module name -->
 <div class="post_body_title"><?php echo $lang['Login']; ?></div>
@@ -86,6 +87,15 @@ if(Form::$num_errors > 0){
 		<td><input type="password" name="pass" maxlength="30" value="<?php echo Form::value("pass"); ?>"></td>
 		<td><?php echo Form::error("pass"); ?></td>
 	</tr>
+    <tr>
+        <td>&nbsp;</td>
+        <td><?php captcha::createcaptcha('loginout'); ?></td>
+    </tr>
+    <tr>
+        <td><?php echo $lang['Captcha']; ?>:</td>
+        <td><input type="text" name="captcha" maxlength="10"></td>
+        <td><?php echo Form::error("captcha");?></td>
+    </tr>
 	<tr>
 		<td colspan="2" align="left">
 			<input type="checkbox" name="remember" <?php if(Form::value("remember") != ""){ echo "checked"; } ?>>

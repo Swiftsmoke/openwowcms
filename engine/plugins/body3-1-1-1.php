@@ -6,7 +6,7 @@ if (!class_exists("shoutbox"))
 }
 else
 {
-	$shoutbox = new shoutbox();
+	$shoutbox = new shoutbox(isset($proccess));
 	$shoutbox->plugin();
 }
 ?>

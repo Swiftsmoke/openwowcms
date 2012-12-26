@@ -1,7 +1,7 @@
 <?php
-  
+
   $lang = array(
-    
+
     "Navigation"=>"Navigation",
     "Welcome"=>"Welcome",
     "Administration"=>"Administration",
@@ -40,19 +40,20 @@
     "not found"=>"not found",
     "below 5 characters"=>"below 5 characters",
     "above 30 characters"=>"above 30 characters",
+    "Captcha"=>"Captcha",
     "reserved word"=>"reserved word",
     "already in use"=>"already in use",
     "Website Ban"=>"Website Ban",
     "Ingame Ban"=>"Ingame Ban",
-    
+
     "Invalid"=>"Invalid",
     "Remember me next time"=>"Remember me next time",
     "Userpanel"=>"Userpanel",
-    
+
     "News"=>"News",
     "Posted"=>"Posted",
     "comments"=>"comments",
-    "second"=>"second", 
+    "second"=>"second",
     "minute"=>"minute",
     "hour"=>"hour",
     "day"=>"day",
@@ -68,7 +69,7 @@
     "Guests here"=>"Online guests",
     "More comments"=>"More comments",
     "Post comment"=>"Post comment",
-    
+
     "Profile"=>"Profile",
     "Avatar"=>"Avatar",
     "Question"=>"Question",
@@ -76,7 +77,7 @@
     "hidden"=>"hidden",
     "Allowed Characters"=>"Allowed Characters",
     "All realms"=>"All realms",
-    
+
     "Vote"=>"Vote",
     "Home"=>"Home",
     "Loading"=>"Loading",
@@ -128,5 +129,5 @@
     "TELEPORT_3"=>"Not enough money",
     //Module: Unstucker
     "Unstucker"=>"Unstucker",
-    
+
   );
