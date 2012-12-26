@@ -16,7 +16,7 @@
 *
 ************************************************************************/
 
-if (!defined('AXE_db') && !defined('AXE'))
+if (!defined('OPENWOWCMS'))
 	die("Access Error...");
 
 

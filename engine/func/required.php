@@ -1,8 +1,8 @@
 <?php
 /************************************************************************
-*													  engine/func/required.php
+*                           engine/func/required.php
 *                            -------------------
-* 	 Copyright (C) 2011
+* 	 Copyright (C) 2011 - 2012
 *
 * 	 This package is free software: you can redistribute it and/or modify
 *    it under the terms of the GNU General Public License as published by
@@ -12,7 +12,7 @@
 *  	 This package is based on the work of the web-wow.net and openwow.com
 * 	 team during 2007-2010.
 *
-* 	 Updated: $Date 2012/02/08 14:00 $
+* 	 Updated: $Date 2012/12/26 10:53 $
 *
 ************************************************************************/
 
@@ -283,7 +283,7 @@ class Html {
 		{
 			$string .= "'".$sql2['conf_name']."' => '".$sql2['conf_value']."'," . Html::ln();
 		}
-		$string .= ");" .  Html::ln() .  Html::ln() . "define('AXE',1);" . Html::ln() . Html::ln();
+		$string .= ");" .  Html::ln() .  Html::ln() . "define('OPENWOWCMS', true, true);" . Html::ln() . Html::ln();
 		// Recache config
 		return Html::cache($string, PATHROOT.'config/config.php');
 	}
@@ -489,11 +489,11 @@ class Html {
 
 		if ($config['footer_detail'] == '1' or ($config['footer_detail'] == '2' && $user->isAdmin()))
 		{
-			return $lang['Page generated'].': '.round((microtime()-TIMESTART),2).' | '.$lang['Queries executed'].': '.database::$num_queries.' | '.$lang['Copyright'].' &copy; 2010-2011 | '.$style.$lang['Powered by'].': <a href="index.php?page=credits" title="">WWCv2</a>  | <a href="tos.php">'.$lang['Terms of Use'].'</a>';
+			return $lang['Page generated'].': '.round((get_microtime()-TIMESTART),2).' | '.$lang['Queries executed'].': '.database::$num_queries.' | '.$lang['Copyright'].' &copy; 2010-2012 | '.$style.$lang['Powered by'].': <a href="index.php?page=credits" title="">WWCv2</a>  | <a href="tos.php">'.$lang['Terms of Use'].'</a>';
 		}
 		else
 		{
-			return $lang['Copyright'].' &copy; 2010-2011 | '.$style.$lang['Powered by'].': <a target="_blank" href="http://www.web-wow.net/" title="">WWCv2</a>  | <a href="tos.php">'.$lang['Terms of Use'].'</a>';
+			return $lang['Copyright'].' &copy; 2010-2012 | '.$style.$lang['Powered by'].': <a target="_blank" href="http://www.web-wow.net/" title="">WWCv2</a>  | <a href="tos.php">'.$lang['Terms of Use'].'</a>';
 		}
 	}
 

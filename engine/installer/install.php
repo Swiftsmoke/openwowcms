@@ -16,7 +16,7 @@
 *
 ************************************************************************/
 
-if (!defined('INSTALL_AXE')) die();
+if (!defined('INSTALL_OPENWOWCMS')) die();
 
 /*******************************************************************************
 *				PRELIMINARY LOADING
@@ -400,13 +400,13 @@ EOB;
 					$string .= "'".$row['conf_name']."' => '".$row['conf_value']."'," . $ln;
 				}
 
-				$string .= ");" . $ln . $ln . "define('AXE',1);" . $ln . $ln;
+				$string .= ");" . $ln . $ln . "define('OPENWOWCMS', true, true);" . $ln . $ln;
 				$this->writefile($string,'./config/config.php');
 				echo "<br><br>";
 				$string = "<?php" . $ln. '$db_host="'.$_SESSION['wwcmsv2install']['db_host'].'";' . $ln;
 				$string .= '$db_user="'.$_SESSION['wwcmsv2install']['db_user'].'";' . $ln;
 				$string .= '$db_pass="'.$_SESSION['wwcmsv2install']['db_pass'].'";' . $ln;
-				$string .= "define('AXE_db',1);" . $ln . $ln;
+				$string .= "define('OPENWOWCMS_db', true, true);" . $ln . $ln;
 				$this->writefile($string,'./config/config_db.php');
 				$connect->close();
 			}

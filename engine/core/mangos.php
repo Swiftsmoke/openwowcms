@@ -22,7 +22,7 @@
 # MaNGOS Core Specific
 #----------------------
 #
-if (!defined('AXE_db') && !defined('AXE'))
+if (!defined('OPENWOWCMS'))
 	die("No access...");
 
 define("TBL_ACCOUNT", $config['engine_logon_db'].".account");

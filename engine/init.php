@@ -1,8 +1,8 @@
 <?php
 /************************************************************************
-*														 	 engine/init.php
+*                              engine/init.php
 *                            -------------------
-* 	 Copyright (C) 2011
+* 	 Copyright (C) 2011 - 2012
 *
 * 	 This package is free software: you can redistribute it and/or modify
 *    it under the terms of the GNU General Public License as published by
@@ -12,7 +12,7 @@
 *  	 This package is based on the work of the web-wow.net and openwow.com
 * 	 team during 2007-2010.
 *
-* 	 Updated: $Date 2012/02/08 14:00 $
+* 	 Updated: $Date 2012/12/26 10:53 $
 *
 ************************************************************************/
 
@@ -24,7 +24,7 @@ if (version_compare(PHP_VERSION, '5.0.0') < 0)
 }
 
 include PATHROOT."library/library.php";
-set_error_handler("errorhandler::error", -1);
+set_error_handler("errorhandler::error", E_ALL);
 set_exception_handler('errorhandler::exception');
 //register_shutdown_function('errorhandler::shutdown');
 
@@ -34,7 +34,6 @@ function get_microtime() {
 	$mtime = (double)($mtime[1]) + (double)($mtime[0]);
 	return $mtime;
 }
-
 
 // start the page generation timer
 define('TIMESTART', get_microtime());
@@ -79,7 +78,7 @@ if (file_exists(PATHROOT . 'config/config.php') && file_exists(PATHROOT . 'confi
 	include PATHROOT."config/config_db.php";
 
 	// Include mysql engine and start connection if configs are valid
-	if (defined('AXE_db') && defined('AXE'))
+	if (defined('OPENWOWCMS_db') && defined('OPENWOWCMS'))
 	{
 		library::create_dblink($db, "mysql");
 		$db->init($db_host, $db_user, $db_pass) or die('Unable to connect to MySQL server.<br>' . $db->getLastError());
@@ -89,10 +88,10 @@ if (file_exists(PATHROOT . 'config/config.php') && file_exists(PATHROOT . 'confi
 include PATHROOT. 'engine/version.php';
 
 // Include install if config doesn't exists
-if (!defined('AXE_db'))
+if (!defined('OPENWOWCMS_db') || !defined('OPENWOWCMS'))
 {
 	// restrict users from directly accessing the install directory
-	define('INSTALL_AXE',1);
+	define('INSTALL_OPENWOWCMS', true, true);
 	include PATHROOT . 'engine/installer/install.php';
 }
 

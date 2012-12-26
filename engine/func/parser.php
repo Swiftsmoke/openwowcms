@@ -18,7 +18,7 @@
 
 
 // Make sure no one attempts to run this script "directly"
-if (!defined('AXE'))
+if (!defined('OPENWOWCMS'))
 	exit;
 
 
