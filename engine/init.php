@@ -77,6 +77,11 @@ if (file_exists(PATHROOT . 'config/config.php') && file_exists(PATHROOT . 'confi
 	include PATHROOT."config/config.php";
 	include PATHROOT."config/config_db.php";
 
+    // Convert String to Array
+    $config['engine_char_dbs'] = explode(';', $config['engine_char_dbs']);
+    foreach ($config['engine_char_dbs'] as $rid => &$rinfo)
+        $rinfo = explode('|', $rinfo);
+
 	// Include mysql engine and start connection if configs are valid
 	if (defined('OPENWOWCMS_db') && defined('OPENWOWCMS'))
 	{

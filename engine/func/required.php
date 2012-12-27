@@ -505,15 +505,11 @@ class Html {
 		{
 			if (!$port && !$server)
 			{
-				//loop trough realms and get statuses
-				$config['engine_char_dbs'] = explode(';',$config['engine_char_dbs']);
-
 				$i   = 0;
 				$sep = explode("|",$sep);
 
-				foreach($config['engine_char_dbs'] as $realms)
+				foreach($config['engine_char_dbs'] as $realm_data)
 				{
-					$realm_data = explode("|",$realms);
 					if (!isset($realm_data) || count($realm_data) == 1) continue;
 
 					if (!isset($realm_data[2]) || $realm_data[2] =='')
@@ -532,7 +528,6 @@ class Html {
 				return '<span id="portcheck_port'.$port.'">--</span><script type="text/javascript">ajax_loadContent(\'portcheck1\',\'./engine/dynamic/status.php?port='.$port.'&ip='.$server.'\',\'--\');</script>';
 			}
 		}
-
 		else
 		{
 			return '';

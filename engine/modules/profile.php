@@ -81,12 +81,10 @@ if (!class_exists("profile"))
 								<option value="">'.$lang['All realms'].'</option>';
 
 						// loop trough realms and get statuses
-						$config['engine_char_dbs2'] = explode(';',$config['engine_char_dbs']);
 						$i = 1;
 						$realm_names2 = explode("|",$config['engine_realmnames']);
-						foreach($config['engine_char_dbs2'] as $realms)
+						foreach($config['engine_char_dbs'] as $realms)
 						{
-							$realm_data = explode("|", $realms);
 							if (isset($realm_names2[($i-1)]))
 								echo '<option value="'.$i.'">(ID: '.$i.') '.substr($realm_names2[($i-1)],0,15).'</option>';
 							$i++;

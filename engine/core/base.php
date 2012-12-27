@@ -13,7 +13,7 @@
 *
 ************************************************************************/
 interface BaseUser {
-	function CoreSQL($id, $param1=false,$param2=false,$param3=false,$param4=false,$param5=false,$param6=false,$param7=false);
+	function CoreSQL($id);
 	function return_expansion($id);
 	function print_Char_Dropdown($accountguid);
 	function getUserGM($userid);

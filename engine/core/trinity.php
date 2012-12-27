@@ -33,50 +33,26 @@ class User extends SessionUser implements BaseUser {
 	/**
 	* CoreSQL - Returns Core specific SQL string
 	*/
-	function CoreSQL($id, $param1=false,$param2=false,$param3=false,$param4=false,$param5=false,$param6=false,$param7=false) {
-		global $config,$user,$db;
-		/**
-		* Special realm data fetching:
-		**/
-		if ($id=='1' or $id=='2' or $id=='3')
-		{
-			$config_data[$id]=explode(";",$config['engine_char_dbs']);
-			$config_data[$id.'-2']=explode("|",$config_data[$id][$param2]);
-		}
-		else
-			$config_data=false;
+	function CoreSQL($id) {
+		global $config, $user, $db;
+        $param = func_get_args();
+        array_shift($param); // Remove $id
 
-		$sqls = array(
-			/**
-			* Select username and userids:
-			*  param1 = username;
-			**/
-			0 => 'SELECT id,username FROM '.TBL_ACCOUNT.' WHERE username LIKE "%'.$db->escape($param1).'%"',
-			/**
-			* Select character info (donation and vote shops, teleporter):
-			*  param1 = realm_id (0->); param2 = char_guid;
-			**/
-			1 => 'SELECT name,guid,race,class,gender,level,money FROM '.$config_data[$id.'-2'][0].'.'.TBL_CHARACTERS.' WHERE guid="'.$param1.'" AND account="'.$user->userinfo['guid'].'" LIMIT 1',
-			/**
-			* Teleport character
-			**/
-			2 => 'UPDATE '.$config_data[$id.'-2'][0].'.'.TBL_CHARACTERS.' SET position_x="'.$param3.'", position_y="'.$param4.'", position_z="'.$param5.'", map="'.$param1.'", money="'.$param6.'" WHERE guid="'.$param7.'"',
-			/**
-			* Unstuck character
-			**/
-			3 => "UPDATE ".$config_data[$id.'-2'][0].'.'.TBL_CHARACTERS." INNER JOIN ".$config_data[$id.'-2'][0].".character_homebind".
-				 " ON ".TBL_CHARACTERS.".guid = character_homebind.guid AND  ".TBL_CHARACTERS.".guid = '".$param1."'".
-				 " SET ".TBL_CHARACTERS.".position_X = character_homebind.position_x,".
-						 TBL_CHARACTERS.".position_Y = character_homebind.position_y,".
-						 TBL_CHARACTERS.".position_z = character_homebind.position_z,".
-						 TBL_CHARACTERS.".map = character_homebind.map,".
-						 TBL_CHARACTERS.".zone = character_homebind.zone",
-			/**
-			* Expansion change, 0 to 3
-			**/
-			4 => "UPDATE ".TBL_ACCOUNT." SET expansion='".$param2."' WHERE id='".$param1."'",
-			);
-		return $sqls[$id];
+        switch ($id)
+        {
+            case 0: // Get id and username
+                return "SELECT id, username FROM " . TBL_ACCOUNT . " WHERE username = \"{$db->escape($param[0])}\" LIMIT 1";
+            case 1: // Get character info
+                return "SELECT name, guid, race, class, gender, level, money FROM " . TBL_CHARACTERS . " WHERE guid = '{$param[0]}' AND account = '{$param[1]}' LIMIT 1";
+            case 2: // Teleport character
+                return '';
+            case 3: // Unstuck character
+                return '';
+            case 4: // Expansion Change
+                return "UPDATE ".TBL_ACCOUNT." SET expansion = '{$param[1]}' WHERE id = '{$param[0]}' LIMIT 1";
+            default: // NYI
+                return '';
+        }
 	}
 
 	/**
@@ -84,20 +60,14 @@ class User extends SessionUser implements BaseUser {
 	*/
 	function return_expansion($id) {
 		switch ($id) {
-			case 0:
-				return "0";
-				break;
-			case 1:
-				return "1";
-				break;
-			case 2:
-				return "2";
-				break;
-			case 3:
-				return "3";
-				break;
-			default:
-				return "2";
+			case 0: // Classic
+			case 1: // The Burning Crusade
+			case 2: // Wrath of the Lich King
+            case 3: // Cataclysm
+            case 4: // Pandaria
+                return $id;
+            default:
+                return "2";
 		}
 	}
 
@@ -107,21 +77,19 @@ class User extends SessionUser implements BaseUser {
 	function print_Char_Dropdown($accountguid, $CurAct='') {
 		global $config;
 		echo '<select name="character">';
-		$split_realmname=explode('|',$config['engine_realmnames']);//we have data in array
-		$split0=explode(';',$config['engine_char_dbs']); //CHAR_DB1|REALM_SQL_PORT|DB1_HOST|DB1_USER|DB1_PASS or CHAR_DB2|REALM_SQL_PORT
-		foreach ($split0 as $key=>$split00) {
-			$split1=explode('|',$split00);//we have data in array
+		$split_realmname=explode('|',$config['engine_realmnames']);
+		foreach ($config['engine_char_dbs'] as $key => $realm_data) {
 			/* loop realms then loop characters */
 			$db_realmconnector = connect_realm($key);
 			if ($db_realmconnector) {
-				$q="SELECT name, guid FROM ".$split1[0].".".TBL_CHARACTERS." WHERE account =  '".$accountguid."'";
+				$q="SELECT name, guid FROM ".$realm_data[0].".".TBL_CHARACTERS." WHERE account =  '".$accountguid."'";
 				$a = $db_realmconnector->query($q);
 				if ($a) {
 					while ($a2=$db_realmconnector->getRow($a)){
 						if ($CurAct==$key.'-'.$a2[1]) $sel='" selected'; else $sel ='"';
 						echo '<option value="'.$key.'-'.$a2[1].$sel.'">'.$split_realmname[$key].' &raquo; '.$a2[0].'</option>';
 					}
-				} //else $_SESSION['notice'].= $q." - ".$db_realmconnector->getLastError()."<br>\n";
+				}
 			}
 		}
 		echo '</select>';
@@ -375,12 +343,11 @@ class User extends SessionUser implements BaseUser {
 		/**
 		* REALM DETECTION:
 		*/
-		$split0=explode(';',$config['engine_char_dbs']);
-		$realm_array=explode('|',$split0[$realmid]);//we have data in array
+		$realm_array = $config['engine_char_dbs'][$realmid];//we have data in array
 		if (!isset($realm_array[2]))
-			$realm_host=$db_host;
+			$realm_host = $db_host;
 		else
-			$realm_host=trim($realm_array[2]);
+			$realm_host = trim($realm_array[2]);
 		//port:
 		$realm_ra_port=explode("|",$config['trinity_ra_port']);
 		/**
