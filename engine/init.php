@@ -24,8 +24,8 @@ if (version_compare(PHP_VERSION, '5.0.0') < 0)
 }
 
 include PATHROOT."library/library.php";
-set_error_handler("errorhandler::error", E_ALL);
-set_exception_handler('errorhandler::exception');
+//set_error_handler("errorhandler::error", E_ALL);
+//set_exception_handler('errorhandler::exception');
 //register_shutdown_function('errorhandler::shutdown');
 
 function get_microtime() {

@@ -68,7 +68,7 @@ class adminfunc {
 			<td>
 				<table width="100%" border="0" >
 					<tr>
-						<td style="border:none"><strong><?php echo $github->create_link(SHA_VERSION, '#009900'); ?></strong> (<?php echo $lang_admincp['last update']; ?>: <strong><?php echo LASTUPDATE; ?></strong> <font color="#808080"><?php echo $lang_admincp['m/d/y']; ?></font>) (<a href='?f=main&updatecms=true'><?php echo $lang_admincp['Update now']; ?></a>)</td>
+						<td style="border:none"><strong><?php echo $github->create_link(SHA_VERSION, SHA_VERSION == $commit->sha ? '#009900' : 'red'); ?></strong> (<?php echo $lang_admincp['last update']; ?>: <strong><?php echo LASTUPDATE; ?></strong> <font color="#808080"><?php echo $lang_admincp['m/d/y']; ?></font>) (<a href='?f=main&updatecms=true'><?php echo $lang_admincp['Update now']; ?></a>)</td>
 						<td width="300px" style="border:none;border-left: solid 1px grey"><center><?php if (SHA_VERSION == $commit->sha) echo '<font color="green">CMS is up to date</font>'; else echo '<font color="red">CMS is out of date</font>';?></center></td>
 					</tr>
 				</table>

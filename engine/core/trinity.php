@@ -45,7 +45,7 @@ class User extends SessionUser implements BaseUser {
             case 1: // Get character info
                 return "SELECT name, guid, race, class, gender, level, money FROM " . TBL_CHARACTERS . " WHERE guid = '{$param[0]}' AND account = '{$param[1]}' LIMIT 1";
             case 2: // Teleport character
-                return '';
+                return "UPDATE ".TBL_CHARACTERS." SET position_x=\"{$param[2]}\", position_y=\"{$param[3]}\", position_z=\"{$param[4]}\", map=\"{$param[0]}\", money=\"{$param[6]}\" WHERE guid='{$param[7]}'";
             case 3: // Unstuck character
                 return '';
             case 4: // Expansion Change

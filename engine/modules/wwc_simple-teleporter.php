@@ -26,8 +26,8 @@ if (!class_exists("module_base"))
 if (!class_exists("teleporter"))
 {
 	class teleporter extends module_base {
-		
-		
+
+
 		function teleporter($proccess) {
 			global $config, $db;
 			$this->proccess = $proccess;
@@ -46,7 +46,7 @@ if (!class_exists("teleporter"))
 			if ($this->proccess == true) {
 				if (isset($_POST['teleport'])){
 					// * do something
-			
+
 					$location = preg_replace( "/[^0-9]/", "", $_POST['location'] );
 					$charinfo = preg_replace( "/[^0-9-]/", "", $_POST['character'] );
 					$charinfo = explode("-", $charinfo );
@@ -201,8 +201,8 @@ if (!class_exists("teleporter"))
 					if ($newGold>='0') {
 						//teleport the sucker!
 						$q = $user->CoreSQL( 2 ,$map, $realmid, $x, $y, $z, $zone, $newGold, $charguid );
-						$tel_db = $db_realm->query( $q ) or die ($db->error('error_msg'));
-						if ($tel_db) { $_SESSION['notice'].="<center>".$lang['Teleported']."! ". $place.".<br><br><a href='./?page=wwc_simple-teleporter'>".$lang['OK']."</a></center>"; return; }
+						$tel_db = $db_realm->query( $q ) or die ($db->fatal_error('error_msg'));
+						if ($tel_db) { $_SESSION['notice'] ="<center>".$lang['Teleported']."! ". $place.".<br><br><a href='./?page=wwc_simple-teleporter'>".$lang['OK']."</a></center>"; return; }
 					}
 					else $_SESSION['notice'].="<center>".$lang['TELEPORT_3']."!</center><br><br><a href='./?page=wwc_simple-teleporter'>".$lang['OK']."</a>";
 
@@ -215,12 +215,12 @@ if (!class_exists("teleporter"))
 				echo $_SESSION['notice'];
 				$_SESSION['notice']='';
 				return;
-			}			
+			}
 			?>
-			
+
 			<!-- This element is important, must be at beginning of module output, dont change it, except module name -->
 			<div class="post_body_title"><?php echo $lang['Teleporter']; ?></div>
-			
+
 			<center><form method="post">
 <?php
 echo  "<select name='location'>";
@@ -244,7 +244,7 @@ $user->print_Char_Dropdown($user->userinfo['guid']);
 ?>
 </center>
 			<?php
-			
+
 		}
 	}
 }

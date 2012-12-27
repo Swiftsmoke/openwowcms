@@ -537,10 +537,11 @@ class Html {
 	static function credits_cms() {
 		global $lang_admincp;
 
-		echo "<h2>".$lang_admincp['Credits']."</h2><i>".$lang_admincp['Main'].":</i><blockquote>Website is made by <strong>Axe</strong> from <strong>".WEBWOW."</strong></blockquote><i>";
+		echo "<h2>".$lang_admincp['Credits']."</h2><i>".$lang_admincp['Main'].":</i><blockquote>Website is made by <strong>Axe</strong> from <strong>".WEBWOW."</strong> (2010-2011)</blockquote><i>";
 		echo $lang_admincp['Used 3rd party scripts'].":</i><blockquote>Code highlight script: <strong>CodeMirror</strong> written by Franciszek Wawrzak<br>";
-		echo "Tooltips: <strong>WowHead</strong>'s javascript wow item's tooltip script (www.wowhead.com)<br>";
-		echo "Javascript Engine: <strong>jQuery</strong> (jquery.com)</blockquote><i>Contributers:</i><blockquote>Maverfax - debugging during the beta phase</blockquote>";
+		echo "Tooltips: <strong>WowHead</strong>'s javascript wow item's tooltip script (<a href=\"http://www.wowhead.com\">www.wowhead.com</a>)<br>";
+		echo "Javascript Engine: <strong>jQuery-1.7.1</strong> (<a href=\"http://jquery.com\">jquery.com</a>)</blockquote>";
+        echo "<i>Contributers:</i> <blockquote>Maverfax - debugging during the beta phase</blockquote>";
 	}
 
 	static function formatmoney($query_a) {
