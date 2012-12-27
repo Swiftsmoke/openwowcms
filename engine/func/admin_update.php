@@ -51,7 +51,7 @@ class Update {
 			return;
 		}
 		else
-			echo '<big><font color=green>'.$lang_admincp['Update is available'].' (<small>'.$github->create_link(SHA_VERSION).' to '.$github->create_link($commits[0]->sha).'</small>)</font></big><br>';
+			echo '<big><font color="green">'.$lang_admincp['Update is available'].' (<small>'.$github->create_link(SHA_VERSION).' to '.$github->create_link($commits[0]->sha).'</small>)</font></big><br>';
 
 		echo "<br><br><br>";
 		$files = array();
@@ -64,7 +64,6 @@ class Update {
 			echo "<pre class='code'>".$commit->commit->message."</pre></div>";
 			array_push($_SESSION['update_shas'], $commit->sha);
 		}
-		$nextsha = 0;
 		$nextsha = $commits[0]->sha;
 		// No Updates
 		if (count($_SESSION['update_shas']) > 0)
