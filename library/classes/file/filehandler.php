@@ -21,7 +21,10 @@ class filehandler {
 
 	static function isExists($filename, $directory = null) { return file_exists(self::getFilename($filename, $directory)); }
 
-	static function delete($filename, $directory = null) { unlink(self::getFilename($filename, $directory)); }
+	static function delete($filename, $directory = null) {
+        if (static::isExists($filename, $directory))
+            unlink(self::getFilename($filename, $directory));
+    }
 
 	static function file($filename, $directory = null) {
 		$filename = self::getFilename($filename, $directory);
