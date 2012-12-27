@@ -241,7 +241,7 @@ class Html {
 			// Here we will once more reload page using meta reload, sometimes it needs
 			// few reloads until all files are cached properly, reason unknown.
 
-			echo $lang['Caching done in']." ".round((microtime()-TIMESTART),3)."s!</small></font><br>";
+			echo $lang['Caching done in']." ".round((get_microtime()-TIMESTART),3)."s!</small></font><br>";
 
 			if (!isset($_GET['noreload']))
 			{
