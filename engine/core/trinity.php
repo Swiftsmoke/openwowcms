@@ -195,8 +195,8 @@ class User extends SessionUser implements BaseUser {
 
 		/* Retrieve password from result, strip slashes */
 		$dbarray = $db->getRow($result);
-		$dbarray[0] = stripslashes($dbarray[0]);
-		$password = $this->convertPass($username,$password);
+		$dbarray[0] = strtolower(stripslashes($dbarray[0]));
+		$password = strtolower($this->convertPass($username,$password));
 
 		/* Validate that password is correct */
 		if($password == $dbarray[0]){

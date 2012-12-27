@@ -16,9 +16,6 @@
 *
 ************************************************************************/
 
-if (!defined('OPENWOWCMS'))
-	die("Access Error...");
-
 class adminfunc {
 	/*
 	* printmenu - used for left menu
