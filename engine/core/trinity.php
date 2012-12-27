@@ -24,10 +24,10 @@
 if (!defined('OPENWOWCMS'))
 	die("No access...");
 
-define("TBL_ACCOUNT", $config['engine_logon_db'].".account");
-define("TBL_ACCOUNT_ACCESS", $config['engine_logon_db'].".account_access");
+define("TBL_ACCOUNT", "`{$config['engine_logon_db']}`.`account`");
+define("TBL_ACCOUNT_ACCESS", "`{$config['engine_logon_db']}`.`account_access`");
 define("TBL_CHARACTERS", "characters");
-define("TBL_BANNED_USERS_SERVER", $config['engine_logon_db'].".account_banned");
+define("TBL_BANNED_USERS_SERVER", "`{$config['engine_logon_db']}`.`account_banned`");
 
 class User extends SessionUser implements BaseUser {
 	/**
@@ -82,7 +82,7 @@ class User extends SessionUser implements BaseUser {
 			/* loop realms then loop characters */
 			$db_realmconnector = connect_realm($key);
 			if ($db_realmconnector) {
-				$q="SELECT name, guid FROM ".$realm_data[0].".".TBL_CHARACTERS." WHERE account =  '".$accountguid."'";
+				$q="SELECT `name`, `guid` FROM `".$realm_data[0]."`.`".TBL_CHARACTERS."` WHERE `account` =  '".$accountguid."'";
 				$a = $db_realmconnector->query($q);
 				if ($a) {
 					while ($a2=$db_realmconnector->getRow($a)){
@@ -103,7 +103,7 @@ class User extends SessionUser implements BaseUser {
 	*/
 	function getUserGM($userid) {
 		global $db;
-		$q = "SELECT gmlevel FROM ".TBL_ACCOUNT_ACCESS." WHERE id = '".$userid."' LIMIT 1";
+		$q = "SELECT `gmlevel` FROM ".TBL_ACCOUNT_ACCESS." WHERE `id` = '".$userid."' LIMIT 1";
 		$result = $db->query($q);
 		/* Error occurred, return given name by default */
 		if(!$result || ($db->numRows() < 1))
@@ -148,8 +148,8 @@ class User extends SessionUser implements BaseUser {
 				 " FROM ".TBL_ACCOUNT." a,".TBL_USERS." b WHERE a.id = '".$username."' AND b.acc_login=a.username";
 		}
 		else
-			$q = "SELECT a.id as guid,a.username as username,joindate,last_ip,locked as banned,online,expansion,b.vp,b.dp,b.question,b.answer,b.gmlevel,b.avatar".
-				 " FROM ".TBL_ACCOUNT." a,".TBL_USERS." b WHERE UPPER(a.username) = '".$db->escape(strtoupper($username))."' AND b.acc_login=a.username";
+			$q = "SELECT a.`id` as guid,a.`username` as username,`joindate`,`last_ip`,`locked` as banned,`online`,`expansion`,b.`vp`,b.`dp`,b.`question`,b.`answer`,b.`gmlevel`,b.`avatar`".
+				 " FROM ".TBL_ACCOUNT." a,".TBL_USERS." b WHERE UPPER(a.`username`) = '".$db->escape(strtoupper($username))."' AND b.`acc_login`=a.`username`";
 
 		$result = $db->query($q) or die($db->getLastError());
 		/* Error occurred, return given name by default */
@@ -187,7 +187,7 @@ class User extends SessionUser implements BaseUser {
 		}
 
 		/* Verify that user is in database */
-		$q = "SELECT sha_pass_hash FROM ".TBL_ACCOUNT." WHERE username = '$username'";
+		$q = "SELECT `sha_pass_hash` FROM ".TBL_ACCOUNT." WHERE `username` = '$username'";
 		$result = $db->query($q);
 		if(!$result || ($db->numRows() < 1)){
 			return 1; //Indicates username failure
@@ -216,7 +216,7 @@ class User extends SessionUser implements BaseUser {
 		if(!get_magic_quotes_gpc()){
 			$username = addslashes($username);
 		}
-		$q = "SELECT username FROM ".TBL_ACCOUNT." WHERE username = '".$username."'";
+		$q = "SELECT `username` FROM ".TBL_ACCOUNT." WHERE `username` = '".$username."'";
 		$result = $db->query($q) or die($q);
 		return ($db->numRows() > 0);
 		//return false;
@@ -232,11 +232,11 @@ class User extends SessionUser implements BaseUser {
 		if(!get_magic_quotes_gpc()){
 			$username = addslashes($username);
 		}
-		$q0 = "SELECT id FROM ".TBL_ACCOUNT." WHERE UPPER(username) = '".strtoupper($username)."'";
+		$q0 = "SELECT `id` FROM ".TBL_ACCOUNT." WHERE UPPER(`username`) = '".strtoupper($username)."'";
 		$result0 = $db->query($q0) or die($q0);
 		$result1=$db->getRow($result0);
 
-		$q = "SELECT id FROM ".TBL_BANNED_USERS_SERVER." WHERE id = '".$result1[0]."' AND active='1'";
+		$q = "SELECT `id` FROM ".TBL_BANNED_USERS_SERVER." WHERE `id` = '".$result1[0]."' AND `active`='1'";
 		$result = $db->query($q) or die($q);
 		return ($db->numRows() > 0);
 	}
@@ -255,7 +255,7 @@ class User extends SessionUser implements BaseUser {
 	function updatePass($username,$password) {
 		global $db;
 		$password=$this->convertPass($username,$password);
-		$q = "UPDATE ".TBL_ACCOUNT." SET sha_pass_hash='".$password."',v='',s='',sessionkey='' WHERE username = '".$db->escape($username)."' LIMIT 1";
+		$q = "UPDATE ".TBL_ACCOUNT." SET `sha_pass_hash`='".$password."',`v`='',`s`='',`sessionkey`='' WHERE `username` = '".$db->escape($username)."' LIMIT 1";
 		$result = $db->query($q) or die($q);
 		return $result;
 	}
@@ -270,8 +270,8 @@ class User extends SessionUser implements BaseUser {
 		if ($userid<>'')
 		{
 
-			$db->query("DELETE FROM ".TBL_ACCOUNT_ACCESS." WHERE id = '".$userid."'") or die('SQL error at updateGMlevel()');
-			$q = "INSERT INTO ".TBL_ACCOUNT_ACCESS." (id,gmlevel,RealmID) VALUES ( '".$userid."','".$value."','".$realm."' )";
+			$db->query("DELETE FROM ".TBL_ACCOUNT_ACCESS." WHERE `id` = '".$userid."'") or die('SQL error at updateGMlevel()');
+			$q = "INSERT INTO ".TBL_ACCOUNT_ACCESS." (`id`,`gmlevel`,`RealmID`) VALUES ( '".$userid."','".$value."','".$realm."' )";
 			return $db->query($q) or die($q);
 		}
 		else
@@ -287,7 +287,7 @@ class User extends SessionUser implements BaseUser {
 		global $db;
 		$time = time();
 
-		$q = "INSERT INTO ".TBL_ACCOUNT." (username,sha_pass_hash,v,s,email) VALUES ('$username', '".$this->convertPass($username,$password)."', '','', '$email')";
+		$q = "INSERT INTO ".TBL_ACCOUNT." (`username`,`sha_pass_hash`,`v`,`s`,`email`) VALUES ('$username', '".$this->convertPass($username,$password)."', '','', '$email')";
 		return $db->query($q) or die($q);
 	}
 
@@ -297,7 +297,7 @@ class User extends SessionUser implements BaseUser {
 	function addIngameBan($userguid) {
 		global $db;
 		$this->removeIngameBans($userguid);
-		$q = "INSERT INTO ".TBL_BANNED_USERS_SERVER." (id,bannedby,active) VALUES ('".$userguid."','".$this->username."','1')";
+		$q = "INSERT INTO ".TBL_BANNED_USERS_SERVER." (`id`,`bannedby`,`active`) VALUES ('".$userguid."','".$this->username."','1')";
 		$result = $db->query($q) or die($q);
 		return $result;
 	}
@@ -308,7 +308,7 @@ class User extends SessionUser implements BaseUser {
 	function removeIngameBans($userguid) {
 		global $db;
 
-		$q = "DELETE FROM ".TBL_BANNED_USERS_SERVER." WHERE id='".$userguid."'";
+		$q = "DELETE FROM ".TBL_BANNED_USERS_SERVER." WHERE `id`='".$userguid."'";
 		$result = $db->query($q) or die($q);
 		return $result;
 	}
@@ -409,7 +409,7 @@ class User extends SessionUser implements BaseUser {
 			//check database if actuall item is there
 			//WebsiteVoteShopREFXXXXXXX ->this is unique
 			sleep(3);
-			$check=$db->query("SELECT * FROM mail WHERE receiver = '".$playerguid."' AND subject ='".$subject."' LIMIT 1")or die($db->getLastError());
+			$check=$db->query("SELECT * FROM `mail` WHERE `receiver` = '".$playerguid."' AND `subject` ='".$subject."' LIMIT 1")or die($db->getLastError());
 			if($db->numRows()=='0')
 				$status="<br>Recheck script: Mail is not arrived after waiting 3 seconds it might arrive later on, check ingame.";
 			else

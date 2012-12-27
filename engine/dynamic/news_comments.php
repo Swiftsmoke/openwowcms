@@ -31,11 +31,11 @@ include_once(PATHROOT."engine/func/nicetime.php");
 function load_comments($newsid, &$start, $endCount)
 {
 	global $db, $config, $user;
-	$comments_count_sql=$db->query("SELECT count(*) FROM ".$config['engine_web_db'].".wwc2_news_c WHERE newsid='".$newsid."'") or die($db->getLastError());
+	$comments_count_sql=$db->query("SELECT count(*) FROM `".$config['engine_web_db']."`.`wwc2_news_c` WHERE `newsid`='".$newsid."'") or die($db->getLastError());
 	$comments_count = $db->getRow($comments_count_sql);
 	if ($comments_count[0] == 0) return 0;
 
-	$comments_sql=$db->query("SELECT * FROM ".$config['engine_web_db'].".wwc2_news_c WHERE newsid='".$newsid."' ORDER BY id DESC LIMIT ".$start." , ".$endCount) or die($db->getLastError());
+	$comments_sql=$db->query("SELECT * FROM `".$config['engine_web_db']."`.`wwc2_news_c` WHERE `newsid`='".$newsid."' ORDER BY `id` DESC LIMIT ".$start." , ".$endCount) or die($db->getLastError());
 	if ($db->numRows($comments_sql) == 0) return 0; // no comments!
 	//if yes comments
 	while ($comments = $db->getRow($comments_sql))
@@ -75,9 +75,9 @@ if ($_GET['newsid'])
 	{
 		if($user->logged_in && trim($_POST['comment'])<>'')
 		{
-			$db->query("INSERT INTO ".$config['engine_web_db'].".wwc2_news_c (poster,content,newsid,timepost,datepost) VALUES ('".$db->escape($user->username)."','".$db->escape($_POST['comment'])."','".$newsid."','".@date("U")."','')") or die($db->getLastError());
+			$db->query("INSERT INTO `".$config['engine_web_db']."`.`wwc2_news_c` (`poster`,`content`,`newsid`,`timepost`,`datepost`) VALUES ('".$db->escape($user->username)."','".$db->escape($_POST['comment'])."','".$newsid."','".@date("U")."','')") or die($db->getLastError());
 			$insertid = $db->insertId();
-			$comments_sql=$db->query("SELECT * FROM ".$config['engine_web_db'].".wwc2_news_c WHERE newsid='".$newsid."' AND id='".$insertid."' ORDER by id DESC LIMIT 1") or die($db->getLastError());
+			$comments_sql=$db->query("SELECT * FROM `".$config['engine_web_db']."`.`wwc2_news_c` WHERE `newsid`='".$newsid."' AND `id`='".$insertid."' ORDER by `id` DESC LIMIT 1") or die($db->getLastError());
 			$comments = $db->getRow($comments_sql);
 			//get poster ID
 			$userinfo = $user->getUserInfo($comments['poster']);
@@ -102,10 +102,10 @@ if ($_GET['newsid'])
 	{
 		if (!$user->logged_in) exit;
 		//we have to get comment with his id and check poster.... oh god help us all...
-		$comments_sql = $db->query("SELECT * FROM ".$config['engine_web_db'].".wwc2_news_c WHERE id='".$newsid."' LIMIT 1") or die($db->getLastError());
+		$comments_sql = $db->query("SELECT * FROM `".$config['engine_web_db']."`.`wwc2_news_c` WHERE `id`='".$newsid."' LIMIT 1") or die($db->getLastError());
 		$comments = $db->getRow($comments_sql);
 		if(strtoupper($comments['poster']) == strtoupper($user->username) or $user->isAdmin() or $user->isGM()) {
-			$db->query("DELETE FROM ".$config['engine_web_db'].".wwc2_news_c WHERE id='".$newsid."' LIMIT 1") or die($db->getLastError());
+			$db->query("DELETE FROM `".$config['engine_web_db']."`.`wwc2_news_c` WHERE `id`='".$newsid."' LIMIT 1") or die($db->getLastError());
 		}
 		return;
 	}

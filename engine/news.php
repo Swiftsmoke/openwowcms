@@ -23,12 +23,12 @@ include_once("./engine/func/nicetime.php");
 <!-- This element is important, must be at beginning of module output, dont change it, except module name -->
 <div class="post_body_title"><?php echo $lang['News']; if ($user->isAdmin()) echo '<span style="float: right;margin-right:30px"><a href="javascript:void(0);" onclick="createnews();">Create</a></span>';?></div>
 <?php
-$news_sql = $db->query("SELECT * FROM ".$config['engine_web_db'].".wwc2_news WHERE hidden='0' ORDER BY stickied DESC,id DESC LIMIT 20") or die($db->getLastError());
+$news_sql = $db->query("SELECT * FROM `".$config['engine_web_db']."`.`wwc2_news` WHERE `hidden`='0' ORDER BY `stickied` DESC,`id` DESC LIMIT 20") or die($db->getLastError());
 $lastid = 0;
 while ($news = $db->getRow($news_sql))
 {
 	//get comment count
-	$comments_count_sql=$db->query("SELECT count(*) FROM ".$config['engine_web_db'].".wwc2_news_c WHERE newsid='".$news['id']."'") or die($db->getLastError());
+	$comments_count_sql=$db->query("SELECT count(*) FROM `".$config['engine_web_db']."`.`wwc2_news_c` WHERE `newsid`='".$news['id']."'") or die($db->getLastError());
 	$comments_count = $db->getRow($comments_count_sql);
 	//print news structure
 	echo '
