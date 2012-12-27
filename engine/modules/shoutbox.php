@@ -86,6 +86,7 @@ if (!class_exists("shoutbox"))
 				while ($row = $db->getRow($shouts_sql))
 					$this->echo_shout($row);
 			}
+            echo " ";
 		}
 
 		function plugin() {
@@ -111,11 +112,11 @@ if (!class_exists("shoutbox"))
 			parent::plugin();
 		}
 
-		function echo_shout($arr) {
+		public static function echo_shout($arr) {
 			global $user, $config, $lang;
 			if (is_array($arr) && isset($arr[0]) && is_array($arr[0]))
 			{
-				array_map("self::echo_shout", $arr);
+				array_map("static::echo_shout", $arr);
 				return;
 			}
 

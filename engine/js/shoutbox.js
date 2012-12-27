@@ -46,6 +46,7 @@ var shoutbox = {
 									eval(data);
 									return;
 								}
+                                if(data == " ") return;
 								var count = 1;
 								$($(data).get().reverse()).each(
 										function ()
