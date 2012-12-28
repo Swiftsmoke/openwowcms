@@ -126,7 +126,7 @@ abstract class database {
 	 * @return void
 	 *
 	 */
-	public function fatal_error($msg) {
+	public function fatal_error($msg = '') {
 		echo "<pre>Error!: $msg\n";
 		$bt = debug_backtrace();
 		foreach($bt as $line) {

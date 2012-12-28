@@ -23,36 +23,33 @@ if(isset($proccess) && $proccess == TRUE){
 	//* if not, the user is effectively logged in to the system.
 	//* If user is logged in, he will be logged out and redirected to
 	//* index.php page.
-	
+
 	function Process(){
-		global $user, $form, $config,$db,$lang;
+		global $user, $form, $config,$lang;
 
 		$charinfox = preg_replace( "/[^0-9-]/", "", $_POST['character'] );
 		$charinfo = explode("-", $charinfox );
 		$realmid=$charinfo[0];
 		$charguid=$charinfo[1];
 
-		//* Get character info 
+		//* Get character info
 		$db_realm = connect_realm($realmid);
-		//$char_info0 = $db_realm->query( $user->CoreSQL(1 ,$charguid, $realmid ) ) or die ($db::error('error_msg'));
-		//$char_info = $db_realm->getArray( $char_info0 );
 
 		//unstuck!
-		//echo  $user->CoreSQL( 3 ,$char_info['guid'], $realmid  );exit;
 		$q=$user->CoreSQL( 3 ,$charguid, $realmid  );
-		$tel_db = $db_realm->query( $q ) or die ($db->error('error_msg'));
+		$tel_db = $db_realm->query( $q ) or die ($db_realm->fatal_error('error_msg'));
 		if ($tel_db) {
-			$_SESSION['notice'].="<center>".$lang['Success']."!<br><br><a href='./?page=wwc-unstucker'>".$lang['OK']."</a></center>"; //return;
+			$_SESSION['notice'] = "<center>".$lang['Success']."!<br><br><a href='./?page=wwc-unstucker'>".$lang['OK']."</a></center>"; //return;
 		}
-		else $_SESSION['notice'].="<center>".$lang['Fail']."!<br><br><a href='./?page=wwc-unstucker'>".$lang['OK']."</a></center>";
+		else $_SESSION['notice'] = "<center>".$lang['Fail']."!<br><br><a href='./?page=wwc-unstucker'>".$lang['OK']."</a></center>";
 	}
 
 	if (isset($_POST['unstuck'])){
-		//* Initialize process 
+		//* Initialize process
 		Process();
 	}
 
-	//* Reinitilaze 'form' proccess with latest session data 
+	//* Reinitilaze 'form' proccess with latest session data
 	Form::_Form();
 	return;
 }

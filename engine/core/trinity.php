@@ -47,7 +47,13 @@ class User extends SessionUser implements BaseUser {
             case 2: // Teleport character
                 return "UPDATE ".TBL_CHARACTERS." SET position_x=\"{$param[2]}\", position_y=\"{$param[3]}\", position_z=\"{$param[4]}\", map=\"{$param[0]}\", money=\"{$param[6]}\" WHERE guid='{$param[7]}'";
             case 3: // Unstuck character
-                return '';
+                return "UPDATE ".TBL_CHARACTERS." INNER JOIN character_homebind".
+                 " ON ".TBL_CHARACTERS.".guid = character_homebind.guid AND  ".TBL_CHARACTERS.".guid = '{$param[0]}'".
+                 " SET ".TBL_CHARACTERS.".position_X = character_homebind.posX,".
+                         TBL_CHARACTERS.".position_Y = character_homebind.posY,".
+                         TBL_CHARACTERS.".position_z = character_homebind.posZ,".
+                         TBL_CHARACTERS.".map = character_homebind.mapId,".
+                         TBL_CHARACTERS.".zone = character_homebind.zoneId";
             case 4: // Expansion Change
                 return "UPDATE ".TBL_ACCOUNT." SET expansion = '{$param[1]}' WHERE id = '{$param[0]}' LIMIT 1";
             default: // NYI
@@ -297,7 +303,7 @@ class User extends SessionUser implements BaseUser {
 	function addIngameBan($userguid) {
 		global $db;
 		$this->removeIngameBans($userguid);
-		$q = "INSERT INTO ".TBL_BANNED_USERS_SERVER." (`id`,`bannedby`,`active`) VALUES ('".$userguid."','".$this->username."','1')";
+		$q = "INSERT INTO ".TBL_BANNED_USERS_SERVER." (`id`,`bannedby`,`active`,`banreason`) VALUES ('".$userguid."','".$this->username."','1','Banned via website')";
 		$result = $db->query($q) or die($q);
 		return $result;
 	}
